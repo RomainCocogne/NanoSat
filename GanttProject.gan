@@ -106,7 +106,7 @@
         </task>
         <task id="9" name="Définir l'architecture" color="#99ff00" meeting="false" start="2019-11-08" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
         <task id="12" name="Définir la BOM" color="#99ff00" meeting="false" start="2019-11-15" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
-        <task id="15" name="Sortie à l'observatoire :)" color="#00cc33" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="15" name="Sortie à l'observatoire :)" color="#00cc33" meeting="false" start="2019-11-22" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
         <task id="18" name="Budget" color="#ff66ff" meeting="false" start="2019-10-14" duration="10" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" priority="0" expand="true"/>
     </tasks>
     <resources/>
