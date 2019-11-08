@@ -4,7 +4,7 @@
         <field id="tpd3" name="Nom" width="243" order="0"/>
         <field id="tpd4" name="Date de début" width="75" order="1"/>
         <field id="tpd5" name="Date de fin" width="79" order="2"/>
-        <option id="color.recent"><![CDATA[#99ff00 #cc00cc #ff0000 #ffff00 #00cccc #3366ff #ff66ff #00cc33 #66ff00]]></option>
+        <option id="color.recent"><![CDATA[#ff0000 #99ff00 #cc00cc #ffff00 #00cccc #3366ff #ff66ff #00cc33 #66ff00]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -123,7 +123,10 @@
         <task id="21" name="Circuit panneaux solaires" color="#ffff00" meeting="false" start="2019-10-25" duration="1" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
         <task id="29" name="Choix du microcontrolleur" color="#00cccc" meeting="false" start="2019-10-25" duration="9" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
         <task id="40" name="Choix des autres capteurs" color="#00cccc" meeting="false" start="2019-11-14" duration="1" complete="0" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true"/>
-        <task id="65" name="Cahier des charges" color="#cc00cc" meeting="false" start="2019-11-08" duration="30" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="65" name="Cahier des charges" color="#cc00cc" meeting="false" start="2019-11-08" duration="30" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="80" type="1" difference="0" hardness="Strong"/>
+        </task>
+        <task id="80" name="Rapport S1" color="#ff0000" meeting="false" start="2019-11-08" duration="30" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true"/>
         <task id="41" name="Réception du matériel" color="#99ff00" meeting="false" start="2020-02-07" duration="1" complete="0" thirdDate="2019-11-08" thirdDate-constraint="0" expand="true">
             <depend id="45" type="1" difference="0" hardness="Strong"/>
         </task>
