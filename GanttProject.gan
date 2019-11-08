@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2019-10-09" view-index="0" gantt-divider-location="334" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2019-10-01" view-index="0" gantt-divider-location="401" resource-divider-location="300" version="2.8.10" locale="fr">
     <description><![CDATA[Carte alim panneaux solaires nanosat Nice Cube]]></description>
-    <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="161" order="0"/>
-        <field id="tpd4" name="Date de début" width="85" order="1"/>
-        <field id="tpd5" name="Date de fin" width="84" order="2"/>
-        <option id="color.recent"><![CDATA[#ffff00 #00cccc #3366ff #ff66ff #00cc33 #99ff00 #66ff00]]></option>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="243" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="79" order="2"/>
+        <option id="color.recent"><![CDATA[#99ff00 #cc00cc #ff0000 #ffff00 #00cccc #3366ff #ff66ff #00cc33 #66ff00]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -112,6 +112,7 @@
             <depend id="20" type="4" difference="0" hardness="Strong"/>
             <depend id="29" type="4" difference="0" hardness="Strong"/>
             <depend id="40" type="1" difference="0" hardness="Strong"/>
+            <depend id="65" type="1" difference="0" hardness="Strong"/>
         </task>
         <task id="12" name="Définir la BOM" color="#99ff00" meeting="false" start="2019-11-15" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
             <depend id="40" type="4" difference="0" hardness="Strong"/>
@@ -121,7 +122,44 @@
         <task id="20" name="Schémas fonctionnel" color="#3366ff" meeting="false" start="2019-10-18" duration="14" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
         <task id="21" name="Circuit panneaux solaires" color="#ffff00" meeting="false" start="2019-10-25" duration="1" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
         <task id="29" name="Choix du microcontrolleur" color="#00cccc" meeting="false" start="2019-10-25" duration="9" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
-        <task id="40" name="Choix des autres capteurs" color="#00cccc" meeting="false" start="2019-11-08" duration="4" complete="0" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true"/>
+        <task id="40" name="Choix des autres capteurs" color="#00cccc" meeting="false" start="2019-11-14" duration="1" complete="0" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true"/>
+        <task id="65" name="Cahier des charges" color="#cc00cc" meeting="false" start="2019-11-08" duration="30" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="41" name="Réception du matériel" color="#99ff00" meeting="false" start="2020-02-07" duration="1" complete="0" thirdDate="2019-11-08" thirdDate-constraint="0" expand="true">
+            <depend id="45" type="1" difference="0" hardness="Strong"/>
+        </task>
+        <task id="45" name="Inventaire" color="#cc00cc" meeting="false" start="2020-02-07" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="50" name="Test microcontrôlleur" color="#99ff00" meeting="false" start="2020-02-14" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="53" name="Test magnétomètre (dév code)" color="#99ff00" meeting="false" start="2020-02-21" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="57" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="57" name="Test sensor solaire (lampe halogène)" color="#99ff00" meeting="false" start="2020-02-28" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="60" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="60" name="Test sensor horizon (à voir en fonction météo)" color="#99ff00" meeting="false" start="2020-03-06" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="63" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="63" name="Test cellules solaires (lampe halogène)" color="#99ff00" meeting="false" start="2020-03-13" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="67" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="67" name="Tests capteurs séance de marge" color="#99ff00" meeting="false" start="2020-03-20" duration="5" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
+            <depend id="68" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="68" name="Assemblage + test fonctionnel" color="#99ff00" meeting="false" start="2020-03-27" duration="5" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true">
+            <depend id="69" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="69" name="Routage (design de la carte)" color="#cc00cc" meeting="false" start="2020-04-03" duration="42" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true"/>
+        <task id="79" name="Finir les tests" color="#99ff00" meeting="false" start="2020-04-10" duration="1" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true">
+            <depend id="70" type="1" difference="0" hardness="Strong"/>
+            <depend id="78" type="1" difference="0" hardness="Strong"/>
+        </task>
+        <task id="78" name="Commencer Rapport" color="#ff0000" meeting="false" start="2020-04-10" duration="37" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true"/>
+        <task id="70" name="Commande du PCB" color="#cc00cc" meeting="false" start="2020-04-10" duration="14" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true">
+            <depend id="71" type="2" difference="9" hardness="Strong"/>
+        </task>
+        <task id="71" name="Soudure CMS" color="#cc00cc" meeting="false" start="2020-05-15" duration="7" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true"/>
+        <task id="72" name="Test prototype" color="#99ff00" meeting="false" start="2020-05-29" duration="1" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
