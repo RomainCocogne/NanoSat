@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2020-01-01" view-index="1" gantt-divider-location="401" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2019-09-01" view-index="0" gantt-divider-location="401" resource-divider-location="300" version="2.8.10" locale="fr">
     <description><![CDATA[Carte alim panneaux solaires nanosat Nice Cube]]></description>
     <view zooming-state="default:8" id="gantt-chart">
         <field id="tpd3" name="Nom" width="262" order="0"/>
@@ -7,8 +7,8 @@
         <option id="color.recent"><![CDATA[#ccffff #ff0000 #99ff00 #cc00cc #ffff00 #00cccc #3366ff #ff66ff #00cc33 #66ff00]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="199" order="0"/>
-        <field id="1" name="Rôle par défaut" width="82" order="1"/>
+        <field id="0" name="Nom" width="206" order="0"/>
+        <field id="1" name="Rôle par défaut" width="90" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -117,7 +117,7 @@
         <task id="12" name="Définir la BOM" color="#99ff00" meeting="false" start="2019-11-15" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true">
             <depend id="40" type="4" difference="0" hardness="Strong"/>
         </task>
-        <task id="15" name="Sortie à l'observatoire :)" color="#00cc33" meeting="false" start="2019-11-22" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+        <task id="15" name="Sortie à l'observatoire" color="#00cc33" meeting="false" start="2019-11-22" duration="1" complete="0" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
         <task id="18" name="Budget" color="#ff66ff" meeting="false" start="2019-10-14" duration="10" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" priority="0" expand="true"/>
         <task id="20" name="Schémas fonctionnel" color="#3366ff" meeting="false" start="2019-10-18" duration="14" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
         <task id="21" name="Circuit panneaux solaires" color="#ffff00" meeting="false" start="2019-10-25" duration="5" complete="0" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true"/>
@@ -188,16 +188,16 @@
         <allocation task-id="15" resource-id="0" function="Default:0" responsible="true" load="1.0"/>
         <allocation task-id="18" resource-id="0" function="Default:0" responsible="true" load="30.0"/>
         <allocation task-id="20" resource-id="0" function="Default:0" responsible="true" load="15.0"/>
-        <allocation task-id="21" resource-id="0" function="Default:0" responsible="true" load="40.0"/>
+        <allocation task-id="21" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
         <allocation task-id="80" resource-id="0" function="Default:0" responsible="false" load="45.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:0" responsible="true" load="10.0"/>
         <allocation task-id="0" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
         <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
         <allocation task-id="6" resource-id="1" function="Default:0" responsible="false" load="1.0"/>
-        <allocation task-id="9" resource-id="1" function="Default:1" responsible="true" load="10.0"/>
         <allocation task-id="12" resource-id="1" function="Default:1" responsible="false" load="15.0"/>
         <allocation task-id="15" resource-id="1" function="Default:1" responsible="false" load="1.0"/>
         <allocation task-id="18" resource-id="1" function="Default:1" responsible="false" load="30.0"/>
-        <allocation task-id="20" resource-id="1" function="Default:1" responsible="false" load="20.0"/>
+        <allocation task-id="20" resource-id="1" function="Default:1" responsible="false" load="2.0"/>
         <allocation task-id="21" resource-id="1" function="Default:1" responsible="false" load="30.0"/>
         <allocation task-id="29" resource-id="1" function="Default:1" responsible="true" load="16.0"/>
         <allocation task-id="65" resource-id="1" function="Default:1" responsible="true" load="40.0"/>
