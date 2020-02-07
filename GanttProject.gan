@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2019-09-01" view-index="0" gantt-divider-location="401" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Nanosat" company="Lagrange" webLink="https://lagrange.oca.eu/fr/accueil-lagrange" view-date="2019-10-07" view-index="0" gantt-divider-location="509" resource-divider-location="230" version="2.8.10" locale="fr">
     <description><![CDATA[Carte alim panneaux solaires nanosat Nice Cube]]></description>
-    <view zooming-state="default:8" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="262" order="0"/>
-        <field id="tpd4" name="Date de début" width="56" order="1"/>
-        <field id="tpd5" name="Date de fin" width="79" order="2"/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="345" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="85" order="2"/>
         <option id="color.recent"><![CDATA[#ccffff #ff0000 #99ff00 #cc00cc #ffff00 #00cccc #3366ff #ff66ff #00cc33 #66ff00]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="206" order="0"/>
-        <field id="1" name="Rôle par défaut" width="90" order="1"/>
+        <field id="0" name="Nom" width="116" order="0"/>
+        <field id="1" name="Rôle par défaut" width="110" order="1"/>
     </view>
     <!-- -->
     <calendars>
