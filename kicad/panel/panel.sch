@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+LIBS:panel-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5E35136B
+P 5350 4000
+F 0 "#PWR0101" H 5350 3750 50  0001 C CNN
+F 1 "GND" H 5355 3827 50  0000 C CNN
+F 2 "" H 5350 4000 50  0001 C CNN
+F 3 "" H 5350 4000 50  0001 C CNN
+	1    5350 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Vsolar #PWR0102
+U 1 1 5E3522C3
+P 5350 2800
+F 0 "#PWR0102" H 5350 2650 50  0001 C CNN
+F 1 "Vsolar" H 5367 2973 50  0000 C CNN
+F 2 "" H 5350 2800 50  0001 C CNN
+F 3 "" H 5350 2800 50  0001 C CNN
+	1    5350 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC1
+U 1 1 5E356626
+P 5350 3000
+F 0 "SC1" H 5458 3050 50  0000 L CNN
+F 1 "Solar_Cell" H 5450 3000 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 5350 3060 50  0001 C CNN
+F 3 "~" V 5350 3060 50  0001 C CNN
+	1    5350 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC2
+U 1 1 5E3572C7
+P 5350 3300
+F 0 "SC2" H 5458 3350 50  0000 L CNN
+F 1 "Solar_Cell" H 5450 3300 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 5350 3360 50  0001 C CNN
+F 3 "~" V 5350 3360 50  0001 C CNN
+	1    5350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC3
+U 1 1 5E357C03
+P 5350 3600
+F 0 "SC3" H 5458 3650 50  0000 L CNN
+F 1 "Solar_Cell" H 5450 3600 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 5350 3660 50  0001 C CNN
+F 3 "~" V 5350 3660 50  0001 C CNN
+	1    5350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC4
+U 1 1 5E357FF3
+P 5350 3900
+F 0 "SC4" H 5458 3950 50  0000 L CNN
+F 1 "Solar_Cell" H 5450 3900 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 5350 3960 50  0001 C CNN
+F 3 "~" V 5350 3960 50  0001 C CNN
+	1    5350 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E39D443
+P 6200 4000
+F 0 "#PWR0103" H 6200 3750 50  0001 C CNN
+F 1 "GND" H 6205 3827 50  0000 C CNN
+F 2 "" H 6200 4000 50  0001 C CNN
+F 3 "" H 6200 4000 50  0001 C CNN
+	1    6200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Vsolar #PWR0104
+U 1 1 5E39D449
+P 6200 2800
+F 0 "#PWR0104" H 6200 2650 50  0001 C CNN
+F 1 "Vsolar" H 6217 2973 50  0000 C CNN
+F 2 "" H 6200 2800 50  0001 C CNN
+F 3 "" H 6200 2800 50  0001 C CNN
+	1    6200 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC5
+U 1 1 5E39D44F
+P 6200 3000
+F 0 "SC5" H 6308 3050 50  0000 L CNN
+F 1 "Solar_Cell" H 6300 3000 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 6200 3060 50  0001 C CNN
+F 3 "~" V 6200 3060 50  0001 C CNN
+	1    6200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC6
+U 1 1 5E39D455
+P 6200 3300
+F 0 "SC6" H 6308 3350 50  0000 L CNN
+F 1 "Solar_Cell" H 6300 3300 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 6200 3360 50  0001 C CNN
+F 3 "~" V 6200 3360 50  0001 C CNN
+	1    6200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC7
+U 1 1 5E39D45B
+P 6200 3600
+F 0 "SC7" H 6308 3650 50  0000 L CNN
+F 1 "Solar_Cell" H 6300 3600 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 6200 3660 50  0001 C CNN
+F 3 "~" V 6200 3660 50  0001 C CNN
+	1    6200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC8
+U 1 1 5E39D461
+P 6200 3900
+F 0 "SC8" H 6308 3950 50  0000 L CNN
+F 1 "Solar_Cell" H 6300 3900 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 6200 3960 50  0001 C CNN
+F 3 "~" V 6200 3960 50  0001 C CNN
+	1    6200 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E39E673
+P 7000 4000
+F 0 "#PWR0105" H 7000 3750 50  0001 C CNN
+F 1 "GND" H 7005 3827 50  0000 C CNN
+F 2 "" H 7000 4000 50  0001 C CNN
+F 3 "" H 7000 4000 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Vsolar #PWR0106
+U 1 1 5E39E679
+P 7000 2800
+F 0 "#PWR0106" H 7000 2650 50  0001 C CNN
+F 1 "Vsolar" H 7017 2973 50  0000 C CNN
+F 2 "" H 7000 2800 50  0001 C CNN
+F 3 "" H 7000 2800 50  0001 C CNN
+	1    7000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC9
+U 1 1 5E39E67F
+P 7000 3000
+F 0 "SC9" H 7108 3050 50  0000 L CNN
+F 1 "Solar_Cell" H 7100 3000 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 7000 3060 50  0001 C CNN
+F 3 "~" V 7000 3060 50  0001 C CNN
+	1    7000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC10
+U 1 1 5E39E685
+P 7000 3300
+F 0 "SC10" H 7108 3350 50  0000 L CNN
+F 1 "Solar_Cell" H 7100 3300 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 7000 3360 50  0001 C CNN
+F 3 "~" V 7000 3360 50  0001 C CNN
+	1    7000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC11
+U 1 1 5E39E68B
+P 7000 3600
+F 0 "SC11" H 7108 3650 50  0000 L CNN
+F 1 "Solar_Cell" H 7100 3600 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 7000 3660 50  0001 C CNN
+F 3 "~" V 7000 3660 50  0001 C CNN
+	1    7000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L solar_cell:Solar_Cell SC12
+U 1 1 5E39E691
+P 7000 3900
+F 0 "SC12" H 7108 3950 50  0000 L CNN
+F 1 "Solar_Cell" H 7100 3900 50  0001 L CNN
+F 2 "Sprite:TRISOLX-T01" V 7000 3960 50  0001 C CNN
+F 3 "~" V 7000 3960 50  0001 C CNN
+	1    7000 3900
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

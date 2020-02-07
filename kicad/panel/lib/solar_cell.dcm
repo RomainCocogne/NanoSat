@@ -1,0 +1,14 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Solar_Cell
+D Single solar cell
+K solar cell
+F ~
+$ENDCMP
+#
+$CMP Vsolar
+D Power symbol creates a global label with name "VCC"
+K power-flag
+$ENDCMP
+#
+#End Doc Library
