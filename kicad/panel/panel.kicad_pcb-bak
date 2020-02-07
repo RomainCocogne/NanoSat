@@ -124,8 +124,8 @@
     (add_net VCC)
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39A90A)
-    (at 140 70 270)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C15C)
+    (at 55.799 67.968 270)
     (path /5E39E691)
     (fp_text reference SC12 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -156,8 +156,8 @@
       (net 11 "Net-(SC11-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39A92E)
-    (at 180 70)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C180)
+    (at 95.799 67.968)
     (path /5E39E68B)
     (fp_text reference SC11 (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -188,8 +188,8 @@
       (net 10 "Net-(SC10-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39A8E6)
-    (at 180 30 90)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C138)
+    (at 95.799 27.968 90)
     (path /5E39E685)
     (fp_text reference SC10 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -220,8 +220,8 @@
       (net 9 "Net-(SC10-Pad1)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39AB06)
-    (at 173 103 35)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C06C)
+    (at 88.799 100.968 35)
     (path /5E39E67F)
     (fp_text reference SC9 (at 0 0 35) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -252,8 +252,8 @@
       (net 1 VCC) (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39A87A)
-    (at 140 30 180)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C090)
+    (at 55.799 27.968 180)
     (path /5E39D461)
     (fp_text reference SC8 (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -284,8 +284,8 @@
       (net 8 "Net-(SC7-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39AB2A)
-    (at 147 97 215)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C0B4)
+    (at 62.799 94.968 215)
     (path /5E39D45B)
     (fp_text reference SC7 (at 0 0 35) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -316,8 +316,8 @@
       (net 7 "Net-(SC6-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39A89E)
-    (at 147 47 215)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C0D8)
+    (at 62.799 44.968 215)
     (path /5E39D455)
     (fp_text reference SC6 (at 0 0 35) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -348,8 +348,8 @@
       (net 6 "Net-(SC5-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39B97C)
-    (at 173 53 35)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C0FC)
+    (at 88.799 50.968 35)
     (path /5E39D44F)
     (fp_text reference SC5 (at 0 0 35) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -380,8 +380,8 @@
       (net 1 VCC) (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39BCF3)
-    (at 140 80 180)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C1EC)
+    (at 55.799 77.968 180)
     (path /5E356626)
     (fp_text reference SC1 (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -412,8 +412,8 @@
       (net 1 VCC) (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39ABBA)
-    (at 140 120 270)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C210)
+    (at 55.799 117.968 270)
     (path /5E3572C7)
     (fp_text reference SC2 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -444,8 +444,8 @@
       (net 2 "Net-(SC1-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39AB72)
-    (at 180 120)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C1C8)
+    (at 95.799 117.968)
     (path /5E357C03)
     (fp_text reference SC3 (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -476,8 +476,8 @@
       (net 3 "Net-(SC2-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39AB4E)
-    (at 180 80 90)
+  (module Sprite:TRISOLX-T01 (layer F.Cu) (tedit 5E345757) (tstamp 5E39C1A4)
+    (at 95.799 77.968 90)
     (path /5E357FF3)
     (fp_text reference SC4 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
@@ -508,14 +508,14 @@
       (net 4 "Net-(SC3-Pad2)") (solder_mask_margin 0.0762))
   )
 
-  (gr_line (start 140 120) (end 180 120) (layer F.SilkS) (width 0.12) (tstamp 5E39BC48))
-  (gr_line (start 180 80) (end 180 120) (layer F.SilkS) (width 0.12) (tstamp 5E39BC47))
-  (gr_line (start 140 80) (end 180 80) (layer F.SilkS) (width 0.12) (tstamp 5E39BC46))
-  (gr_line (start 140 80) (end 140 120) (layer F.SilkS) (width 0.12) (tstamp 5E39BC45))
-  (gr_line (start 140 30) (end 140 70) (layer F.SilkS) (width 0.12) (tstamp 5E39B32B))
-  (gr_line (start 140 70) (end 180 70) (layer F.SilkS) (width 0.12) (tstamp 5E39B324))
-  (gr_line (start 180 30) (end 180 70) (layer F.SilkS) (width 0.12))
-  (gr_line (start 140 30) (end 180 30) (layer F.SilkS) (width 0.12))
+  (gr_line (start 55.799 117.968) (end 95.799 117.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C11E))
+  (gr_line (start 95.799 77.968) (end 95.799 117.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C11B))
+  (gr_line (start 55.799 77.968) (end 95.799 77.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C115))
+  (gr_line (start 55.799 77.968) (end 55.799 117.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C118))
+  (gr_line (start 55.799 27.968) (end 55.799 67.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C12A))
+  (gr_line (start 55.799 67.968) (end 95.799 67.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C121))
+  (gr_line (start 95.799 27.968) (end 95.799 67.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C124))
+  (gr_line (start 55.799 27.968) (end 95.799 27.968) (layer F.SilkS) (width 0.12) (tstamp 5E39C127))
   (gr_line (start 36.072 114.4922) (end 27.572 114.4922) (layer Edge.Cuts) (width 0.05) (tstamp 5E3994F6))
   (gr_line (start 36.072 122.9922) (end 36.072 114.4922) (layer Edge.Cuts) (width 0.05) (tstamp 5E3994F5))
   (gr_line (start 119.072 114.4922) (end 119.072 122.9922) (layer Edge.Cuts) (width 0.05) (tstamp 5E3994F6))

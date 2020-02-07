@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name panneaux_solaires)(type KiCad)(uri /home/romain/Bureau/NanoSat/kicad/lib/kicad-libs-master/custom-footprints/Sprite.pretty)(options "")(descr ""))
+)
