@@ -24,6 +24,12 @@ K mosfet pmos simulation
 F ~
 $ENDCMP
 #
+$CMP Conn_01x09
+D Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP Jumper_2_Bridged
 D Jumper, 2-pole, closed/bridged
 K Jumper SPST

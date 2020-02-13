@@ -561,7 +561,7 @@ U 1 1 5E49450D
 P 9600 3600
 F 0 "J1" H 9680 3642 50  0000 L CNN
 F 1 "Conn_01x09" H 9680 3551 50  0000 L CNN
-F 2 "Connector_PinSocket_1.27mm:PinSocket_1x09_P1.27mm_Vertical" H 9600 3600 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 9600 3600 50  0001 C CNN
 F 3 "~" H 9600 3600 50  0001 C CNN
 	1    9600 3600
 	1    0    0    -1  
