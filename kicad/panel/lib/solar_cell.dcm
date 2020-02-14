@@ -42,9 +42,21 @@ K LED diode
 F ~
 $ENDCMP
 #
+$CMP RUR040N02HZGTL
+D N-MOSFET transistor, gate/drain/source
+K transistor NMOS N-MOS N-MOSFET
+F ~
+$ENDCMP
+#
 $CMP Solar_Cell
 D Single solar cell
 K solar cell
+F ~
+$ENDCMP
+#
+$CMP TestPoint
+D test point
+K test point tp
 F ~
 $ENDCMP
 #

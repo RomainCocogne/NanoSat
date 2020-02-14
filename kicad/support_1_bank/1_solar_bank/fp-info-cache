@@ -1,4 +1,4 @@
-16306344362597542
+16309507752750542
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72943,81 +72943,90 @@ panneaux_solaires
 LGA24-8X4
 <h3>24-pin LGA 8x4 pins</h3>
 <p>Footprint: 3.5 x 3mm</p>
-<p>Used by:
-<ul><li>LSM9DS1</li></ul></p>
-<p><em>Unproven</em></p>
+0
+0
+0
 
 0
 24
 24
-panneaux_solaires
-RGZ48
-*** TI: RGZ *** JEDEC: S-PQFP-N48 *** 48 PINS *** 
+0
+0
+0
 ---> PIN TP (exposed thermal die pad) should be connected with GND
 
 0
 49
 49
-panneaux_solaires
-R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal
+0
+0
+SOT-23 (TO-236)
+Integrated Circuit
+0
+3
+3
+0
+0
 Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=15.24mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
 Resistor Axial_DIN0309 series Axial Horizontal pin pitch 15.24mm 0.5W = 1/2W length 9mm diameter 3.2mm
 0
 2
 2
-panneaux_solaires
-SOD3715X135N
+0
+0
 
 
 0
 2
 2
-panneaux_solaires
-SOT54E
+0
+0
 <b>SOT-54</b><p>grid 2.54 mm
 
 0
 3
 3
-panneaux_solaires
-SPRITE_PIN
+0
+0
 
 
 0
 1
 1
-panneaux_solaires
-TO-247-3_Vertical
+0
+0
 TO-247-3, Vertical, RM 5.45mm, see https://toshiba.semicon-storage.com/us/product/mosfet/to-247-4l.html
 TO-247-3 Vertical RM 5.45mm
 0
 3
 3
-panneaux_solaires
-TO237
+0
+0
 <b></b>
 
 0
 3
 3
-panneaux_solaires
-TRISOLX-T01
+0
+0
 
 
 0
 2
 2
-panneaux_solaires
-TXC_7Z
+0
+0
 
 
 0
 4
 4
-panneaux_solaires
-TestPoint_Bridge_Pitch2.54mm_Drill0.7mm
+0
+0
 wire loop as test point, pitch 2.0mm, hole diameter 0.7mm, wire diameter 0.5mm
 test point wire loop
 0
 2
 2
+0
+0
