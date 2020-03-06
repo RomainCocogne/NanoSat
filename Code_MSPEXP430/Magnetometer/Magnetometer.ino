@@ -23,7 +23,10 @@
  Fast read enable (0 par defaut)
  Block data update enable (0 par defaut)
 
- OUT_X/Y/Z_L/H_M : output registers p.66*/
+ OUT_X/Y/Z_L/H_M : output registers p.66
+ */
+
+// TODO : Tester le Low performance mode (configurable dans CTRL_REG_3)
 
 #include <Wire.h>
 
@@ -41,28 +44,40 @@ const byte OUT_Y_H = 0x2b;
 const byte OUT_Z_L = 0x2c;
 const byte OUT_Z_H = 0x2d; 
 int16_t data = 0;
-float B_z; 
+float B_z,B_y,B_x; 
 
 void setup() {
   // Init port serie pour le debug
   Serial.begin(9600);
-  //Init la conection i2c en tant que master (pas besoin de specifier d'addresse)
+  //Init I2C connection as master
   Wire.begin();
-  
+
+  //Setup the magnetometer 
+  // - Use high performance mode for x,y, and z axes
+  // - Output data rate 10Hz 
+  // - -+4gauss scale (default)
+  // - Continuous conversion
   int8_t errors = 1;
   int8_t val;
   while( errors != 0){
     errors = 0;
-    // Begin transmission with this slave device
     Wire.beginTransmission(SLAVE_ADDR);
-    // Ask to access the CTRL_REG_1 register
+
+    // CTRL_REG_1 
+    Wire.write(CTRL_REG_1);
+    val = 0x30; // x and y axis high performance mode
+    Wire.write(val);
+    errors += Wire.endTransmission();
+
+    // CTRL_REG_3
     Wire.write(CTRL_REG_3);
     val = 0x00; // continuous conversion
     Wire.write(val);
     errors += Wire.endTransmission();
 
+    // CTRL_REG_4
     Wire.write(CTRL_REG_4);
-    val = 0x01; // medium performance mode
+    val = 0x10; // z axis high performance mode
     Wire.write(val);
     errors += Wire.endTransmission();
     
@@ -81,18 +96,25 @@ void loop() {
   for (int i=0; i<10; ++i){
     // Begin transmission with this slave device
     Wire.beginTransmission(SLAVE_ADDR);
-    // Ask to access the CTRL_REG_1 register
-    Wire.write(OUT_Z_L); //Write value in Tx buffer
+    // Ask to access the values registers
+    Wire.write(OUT_X_L); //Write value in Tx buffer
     if ( Wire.endTransmission() == 0){ //Send value and check for success
-      // Get the value of the register we asked for
-      Wire.requestFrom(SLAVE_ADDR, (uint8_t) 2);
-      data = Wire.read() << 8;   // MSB
-      data |= Wire.read();      // LSB
-      sum10 += data;
+      // Get the value of the registers we asked for
+      Wire.requestFrom(SLAVE_ADDR, (uint8_t) 6);
+      data = Wire.read();   // LSB
+      data |= Wire.read() << 8; // MSB
+      B_x =  data*0.14;
+      data = Wire.read();   // LSB
+      data |= Wire.read() << 8; // MSB
+      B_y = data*0.14;
+      data = Wire.read();   // LSB
+      data |= Wire.read() << 8;  // MSB
+      B_z = data*0.14;
     }
     delay(1);
   }
-  B_z = sum10*0.14*0.001/10;
-  Serial.println(B_z);
+  Serial.print("x : ");Serial.print(B_x);Serial.print(" mGauss  ");
+  Serial.print(";   y : ");Serial.print(B_y);Serial.print(" mGauss  ");
+  Serial.print(";   z : ");Serial.print(B_z);Serial.println(" mGauss  ");
   delay(100);
 }
