@@ -158,7 +158,7 @@ L panneaux_solaires:1M R5
 U 1 1 5E47C63D
 P 10050 1550
 F 0 "R5" H 10118 1596 50  0000 L CNN
-F 1 "1M" H 10118 1505 50  0000 L CNN
+F 1 "100k" H 10118 1505 50  0000 L CNN
 F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 10090 1540 50  0001 C CNN
 F 3 "~" H 10050 1550 50  0001 C CNN
 	1    10050 1550
@@ -792,10 +792,10 @@ Connection ~ 6950 4400
 Wire Wire Line
 	6950 4400 6550 4400
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP11
 U 1 1 5E6CE24C
 P 2300 4050
-F 0 "TP?" H 2358 4168 50  0000 L CNN
+F 0 "TP11" H 2358 4168 50  0000 L CNN
 F 1 "TestPoint" H 2358 4077 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 2500 4050 50  0001 C CNN
 F 3 "~" H 2500 4050 50  0001 C CNN
@@ -803,10 +803,10 @@ F 3 "~" H 2500 4050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP12
 U 1 1 5E6D0041
 P 2300 4350
-F 0 "TP?" H 2358 4468 50  0000 L CNN
+F 0 "TP12" H 2358 4468 50  0000 L CNN
 F 1 "TestPoint" H 2358 4377 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 2500 4350 50  0001 C CNN
 F 3 "~" H 2500 4350 50  0001 C CNN
@@ -814,10 +814,10 @@ F 3 "~" H 2500 4350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP13
 U 1 1 5E6D1A23
 P 2300 4650
-F 0 "TP?" H 2358 4768 50  0000 L CNN
+F 0 "TP13" H 2358 4768 50  0000 L CNN
 F 1 "TestPoint" H 2358 4677 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 2500 4650 50  0001 C CNN
 F 3 "~" H 2500 4650 50  0001 C CNN
@@ -825,10 +825,10 @@ F 3 "~" H 2500 4650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP14
 U 1 1 5E6D6A06
 P 5900 3450
-F 0 "TP?" H 5958 3568 50  0000 L CNN
+F 0 "TP14" H 5958 3568 50  0000 L CNN
 F 1 "TestPoint" H 5958 3477 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 6100 3450 50  0001 C CNN
 F 3 "~" H 6100 3450 50  0001 C CNN
@@ -836,10 +836,10 @@ F 3 "~" H 6100 3450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP15
 U 1 1 5E6D6A0C
 P 5900 3750
-F 0 "TP?" H 5958 3868 50  0000 L CNN
+F 0 "TP15" H 5958 3868 50  0000 L CNN
 F 1 "TestPoint" H 5958 3777 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 6100 3750 50  0001 C CNN
 F 3 "~" H 6100 3750 50  0001 C CNN
@@ -847,10 +847,10 @@ F 3 "~" H 6100 3750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L panneaux_solaires:TestPoint TP?
+L panneaux_solaires:TestPoint TP16
 U 1 1 5E6D6A12
 P 5900 4050
-F 0 "TP?" H 5958 4168 50  0000 L CNN
+F 0 "TP16" H 5958 4168 50  0000 L CNN
 F 1 "TestPoint" H 5958 4077 50  0000 L CNN
 F 2 "panneaux_solaires:TestPoint_Pad_3.0x3.0mm" H 6100 4050 50  0001 C CNN
 F 3 "~" H 6100 4050 50  0001 C CNN
