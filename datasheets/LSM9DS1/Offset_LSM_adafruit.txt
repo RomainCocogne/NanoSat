@@ -1,0 +1,3 @@
+Offset sur x : 122.50  Offset sur y : 143.36  Offset sur z : 56.35
+
+//TODO : re calculer les valeurs d'offset en int brut non converti

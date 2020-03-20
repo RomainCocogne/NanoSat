@@ -26,12 +26,22 @@
  OUT_X/Y/Z_L/H_M : output registers p.66
  */
 
-// TODO : Tester le Low performance mode (configurable dans CTRL_REG_3)
+/*
+ * Valeurs d'offset calculées pour le LSM9DS1 d'adafruit :
+ * OFFSET X : 122.50mgauss 
+ * OFFSET Y : 143.36mgauss
+ * OFFSET Z : 56.35 mgauss
+ */
 
 #include <Wire.h>
 
+//TODO : re calculer les valeurs d'offset en int brut non converti
+const float OFFSET_X = 122.50;
+const float OFFSET_Y = 143.36;
+const float OFFSET_Z = 56.35; 
+
 const byte SLAVE_ADDR = 0x1E; // 0x1E pour le magnetomètre, 0x6B pour le acc/gyro 
-const byte CTRL_REG_1 = 0x20; // valeur par defaut 0001 1000
+const byte CTRL_REG_1 = 0x20; // valeur par defaut 0001 0000
 const byte CTRL_REG_2 = 0x21; // valeur par defaut 0000 0000
 const byte CTRL_REG_3 = 0x22; // valeur par defaut 0000 0011
 const byte CTRL_REG_4 = 0x23; // valeur par defaut 0000 0000
@@ -43,6 +53,7 @@ const byte OUT_Y_L = 0x2a;
 const byte OUT_Y_H = 0x2b;
 const byte OUT_Z_L = 0x2c;
 const byte OUT_Z_H = 0x2d; 
+
 int16_t data = 0;
 float B_z,B_y,B_x; 
 
@@ -50,6 +61,7 @@ void setup() {
   // Init port serie pour le debug
   Serial.begin(9600);
   //Init I2C connection as master
+//  P2REN = 0;
   Wire.begin();
 
   //Setup the magnetometer 
@@ -63,11 +75,11 @@ void setup() {
     errors = 0;
     Wire.beginTransmission(SLAVE_ADDR);
 
-    // CTRL_REG_1 
-    Wire.write(CTRL_REG_1);
-    val = 0x30; // x and y axis high performance mode
-    Wire.write(val);
-    errors += Wire.endTransmission();
+//    // CTRL_REG_1 
+//    Wire.write(CTRL_REG_1);
+//    val = 0x70; // x and y axis ultra high performance mode
+//    Wire.write(val);
+//    errors += Wire.endTransmission();
 
     // CTRL_REG_3
     Wire.write(CTRL_REG_3);
@@ -76,10 +88,10 @@ void setup() {
     errors += Wire.endTransmission();
 
     // CTRL_REG_4
-    Wire.write(CTRL_REG_4);
-    val = 0x10; // z axis high performance mode
-    Wire.write(val);
-    errors += Wire.endTransmission();
+//    Wire.write(CTRL_REG_4);
+////    val = 0x0C; // z axis ultra high performance mode
+//    Wire.write(val);
+//    errors += Wire.endTransmission();
     
     delay(50);
     
@@ -91,27 +103,22 @@ void setup() {
 }
 
 void loop() {
-  //Sum of 50 values
-  int sum10 = 0;
-  for (int i=0; i<10; ++i){
-    // Begin transmission with this slave device
-    Wire.beginTransmission(SLAVE_ADDR);
-    // Ask to access the values registers
-    Wire.write(OUT_X_L); //Write value in Tx buffer
-    if ( Wire.endTransmission() == 0){ //Send value and check for success
-      // Get the value of the registers we asked for
-      Wire.requestFrom(SLAVE_ADDR, (uint8_t) 6);
-      data = Wire.read();   // LSB
-      data |= Wire.read() << 8; // MSB
-      B_x =  data*0.14;
-      data = Wire.read();   // LSB
-      data |= Wire.read() << 8; // MSB
-      B_y = data*0.14;
-      data = Wire.read();   // LSB
-      data |= Wire.read() << 8;  // MSB
-      B_z = data*0.14;
-    }
-    delay(1);
+  // Begin transmission with this slave device
+  Wire.beginTransmission(SLAVE_ADDR);
+  // Ask to access the values registers
+  Wire.write(OUT_X_L); //Write value in Tx buffer
+  if ( Wire.endTransmission() == 0){ //Send value and check for success
+    // Get the value of the registers we asked for
+    Wire.requestFrom(SLAVE_ADDR, (uint8_t) 6);
+    data = Wire.read();   // LSB
+    data |= Wire.read() << 8; // MSB
+    B_x =  data*0.14;
+    data = Wire.read();   // LSB
+    data |= Wire.read() << 8; // MSB
+    B_y = data*0.14;
+    data = Wire.read();   // LSB
+    data |= Wire.read() << 8;  // MSB
+    B_z = data*0.14;
   }
   Serial.print("x : ");Serial.print(B_x);Serial.print(" mGauss  ");
   Serial.print(";   y : ");Serial.print(B_y);Serial.print(" mGauss  ");
