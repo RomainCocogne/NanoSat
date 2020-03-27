@@ -1,15 +1,11 @@
 #pragma once
 #include <MatrixMath.h>
 
-#ifndef INDEX_SIZE
-#define INDEX_SIZE 8
-#endif
-
 class LinearRegressionMTX {
   private:
     mtx_type coeffs_[2];
 
-    void compute_coeffs (mtx_type values[INDEX_SIZE]) {
+    void compute_coeffs (mtx_type values[], uint8_t INDEX_SIZE) {
       mtx_type index[INDEX_SIZE][2];
       for (int i = 0; i < INDEX_SIZE; ++i) {
         index[i][0] = i;
@@ -38,8 +34,8 @@ class LinearRegressionMTX {
 
   public:
     LinearRegressionMTX() {}
-    LinearRegressionMTX(mtx_type values[INDEX_SIZE]) {
-      compute_coeffs(values);
+    LinearRegressionMTX(mtx_type values[], uint8_t INDEX_SIZE) {
+      compute_coeffs(values, INDEX_SIZE);
     }
 
     void resetCoeffs() {
@@ -47,8 +43,8 @@ class LinearRegressionMTX {
       coeffs_[1] = 0;
     }
 
-    void calculate(mtx_type values[INDEX_SIZE]) {
-      compute_coeffs(values);
+    void calculate(mtx_type values[], uint8_t INDEX_SIZE) {
+      compute_coeffs(values, INDEX_SIZE);
     }
 
     void getCoeffs(mtx_type coeffs[2]) {
