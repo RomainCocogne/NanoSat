@@ -1,7 +1,7 @@
 #include <Wire.h>
 
 int data = 0;
-
+double offset = 0.25;
 
 void setup()
 {
@@ -22,7 +22,7 @@ void loop()
   //Precision de 0.125°C
   data = Wire.read()<<3; // MSB
   data |= Wire.read()>>5;// LSB
-  Serial.println(data*0.125);
+  Serial.println(data*0.125 - offset);
 
   delay(500);
 }
