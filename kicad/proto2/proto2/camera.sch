@@ -1,0 +1,241 @@
+EESchema Schematic File Version 4
+LIBS:proto2-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E8B8FAB
+P 4300 2450
+F 0 "#PWR?" H 4300 2300 50  0001 C CNN
+F 1 "+3.3V" H 4315 2623 50  0000 C CNN
+F 2 "" H 4300 2450 50  0001 C CNN
+F 3 "" H 4300 2450 50  0001 C CNN
+	1    4300 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2450 4300 2650
+Wire Wire Line
+	4300 2650 4450 2650
+$Comp
+L power:GND #PWR?
+U 1 1 5E8B920B
+P 5150 3250
+F 0 "#PWR?" H 5150 3000 50  0001 C CNN
+F 1 "GND" H 5155 3077 50  0000 C CNN
+F 2 "" H 5150 3250 50  0001 C CNN
+F 3 "" H 5150 3250 50  0001 C CNN
+	1    5150 3250
+	1    0    0    -1  
+$EndComp
+Text HLabel 6850 1700 2    50   Input ~ 0
+SDA
+Text HLabel 6850 1850 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	5150 1700 5150 1750
+Wire Wire Line
+	5850 1850 5850 2650
+$Comp
+L panneaux_solaires:10uF C?
+U 1 1 5E8BD293
+P 3000 2800
+F 0 "C?" H 3092 2846 50  0000 L CNN
+F 1 "10uF" H 3092 2755 50  0000 L CNN
+F 2 "" H 3000 2800 50  0001 C CNN
+F 3 "~" H 3000 2800 50  0001 C CNN
+	1    3000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L panneaux_solaires:100nF C?
+U 1 1 5E8BD640
+P 3400 2800
+F 0 "C?" H 3492 2846 50  0000 L CNN
+F 1 "100nF" H 3492 2755 50  0000 L CNN
+F 2 "" H 3400 2800 50  0001 C CNN
+F 3 "~" H 3400 2800 50  0001 C CNN
+	1    3400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2700 3000 2700
+Wire Wire Line
+	2800 2700 2800 2650
+Connection ~ 3000 2700
+Wire Wire Line
+	3000 2700 2800 2700
+Wire Wire Line
+	3400 2900 3000 2900
+Wire Wire Line
+	3400 2900 3500 2900
+Wire Wire Line
+	3500 2900 3500 2950
+Connection ~ 3400 2900
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E8BE18F
+P 2800 2650
+F 0 "#PWR?" H 2800 2500 50  0001 C CNN
+F 1 "+3.3V" H 2815 2823 50  0000 C CNN
+F 2 "" H 2800 2650 50  0001 C CNN
+F 3 "" H 2800 2650 50  0001 C CNN
+	1    2800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8BE3B2
+P 3500 2950
+F 0 "#PWR?" H 3500 2700 50  0001 C CNN
+F 1 "GND" H 3505 2777 50  0000 C CNN
+F 2 "" H 3500 2950 50  0001 C CNN
+F 3 "" H 3500 2950 50  0001 C CNN
+	1    3500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L panneaux_solaires:100nF C?
+U 1 1 5E8CBBBD
+P 6850 1200
+F 0 "C?" H 6942 1246 50  0000 L CNN
+F 1 "100nF" H 6942 1155 50  0000 L CNN
+F 2 "" H 6850 1200 50  0001 C CNN
+F 3 "~" H 6850 1200 50  0001 C CNN
+	1    6850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8CE0B8
+P 6850 1300
+F 0 "#PWR?" H 6850 1050 50  0001 C CNN
+F 1 "GND" H 6855 1127 50  0000 C CNN
+F 2 "" H 6850 1300 50  0001 C CNN
+F 3 "" H 6850 1300 50  0001 C CNN
+	1    6850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E8DD0FE
+P 6850 1100
+F 0 "#PWR?" H 6850 950 50  0001 C CNN
+F 1 "+3.3V" H 6865 1273 50  0000 C CNN
+F 2 "" H 6850 1100 50  0001 C CNN
+F 3 "" H 6850 1100 50  0001 C CNN
+	1    6850 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L panneaux_solaires:MLX90641ESF-BAA-000-TU IC?
+U 1 1 5E8B8147
+P 4450 2650
+F 0 "IC?" H 5894 2846 50  0000 L CNN
+F 1 "MLX90641ESF-BAA-000-TU" H 5894 2755 50  0000 L CNN
+F 2 "MLX90621ESFBAB000SP" H 5700 3350 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/734/MLX90614-Datasheet-Melexis-953298.pdf" H 5700 3250 50  0001 L CNN
+F 4 "Board Mount Temperature Sensors" H 5700 3150 50  0001 L CNN "Description"
+F 5 "11.4" H 5700 3050 50  0001 L CNN "Height"
+F 6 "Melexis" H 5700 2950 50  0001 L CNN "Manufacturer_Name"
+F 7 "MLX90641ESF-BAA-000-TU" H 5700 2850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "482-90641ESFBAA000TU" H 5700 2750 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=482-90641ESFBAA000TU" H 5700 2650 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 5700 2550 50  0001 L CNN "RS Part Number"
+F 11 "" H 5700 2450 50  0001 L CNN "RS Price/Stock"
+	1    4450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L panneaux_solaires:330R R?
+U 1 1 5E8EC4D6
+P 6300 1700
+F 0 "R?" V 6095 1700 50  0000 C CNN
+F 1 "330R" V 6186 1700 50  0000 C CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6340 1690 50  0001 C CNN
+F 3 "" H 6300 1700 50  0001 C CNN
+	1    6300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L panneaux_solaires:330R R?
+U 1 1 5E8EC4DC
+P 6300 1850
+F 0 "R?" V 6500 1850 50  0000 C CNN
+F 1 "330R" V 6400 1850 50  0000 C CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6340 1840 50  0001 C CNN
+F 3 "" H 6300 1850 50  0001 C CNN
+	1    6300 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 1850 6150 1850
+Wire Wire Line
+	6450 1850 6850 1850
+Wire Wire Line
+	6850 1700 6450 1700
+Wire Wire Line
+	5850 1550 5850 1850
+Wire Wire Line
+	5600 1550 5600 1700
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E8DC79F
+P 5750 1100
+F 0 "#PWR?" H 5750 950 50  0001 C CNN
+F 1 "+3.3V" H 5765 1273 50  0000 C CNN
+F 2 "" H 5750 1100 50  0001 C CNN
+F 3 "" H 5750 1100 50  0001 C CNN
+	1    5750 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1100 5850 1250
+Wire Wire Line
+	5600 1250 5600 1100
+Wire Wire Line
+	6150 1700 5600 1700
+Wire Wire Line
+	5600 1700 5150 1700
+Connection ~ 5600 1700
+Wire Wire Line
+	5600 1100 5750 1100
+Wire Wire Line
+	5750 1100 5850 1100
+Connection ~ 5750 1100
+Connection ~ 5850 1850
+$Comp
+L panneaux_solaires:NR R?
+U 1 1 5E8F5739
+P 5600 1400
+F 0 "R?" H 5668 1446 50  0000 L CNN
+F 1 "NR" H 5668 1355 50  0000 L CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 5640 1390 50  0001 C CNN
+F 3 "" H 5600 1400 50  0001 C CNN
+	1    5600 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L panneaux_solaires:NR R?
+U 1 1 5E8F5BB2
+P 5850 1400
+F 0 "R?" H 5918 1446 50  0000 L CNN
+F 1 "NR" H 5918 1355 50  0000 L CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 5890 1390 50  0001 C CNN
+F 3 "" H 5850 1400 50  0001 C CNN
+	1    5850 1400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

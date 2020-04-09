@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MLX90641ESF-BAA-000-TU
+D Board Mount Temperature Sensors
+K
+F https://www.mouser.com/datasheet/2/734/MLX90614-Datasheet-Melexis-953298.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,9 +1,61 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 100nF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP 10uF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP 2.2uF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP LTC1664CN
+D Quad Micropower 10-bit DAC, Standard, DIP-16
+K Quad DAC Micropower 10bit 4ch
+F https://www.analog.com/media/en/technical-documentation/data-sheets/1664fa.pdf
+$ENDCMP
+#
+$CMP LTC1664IGN
+D Quad Micropower 10-bit DAC, Industrial, SSOP-16
+K Quad DAC Micropower 10bit 4ch
+F https://www.analog.com/media/en/technical-documentation/data-sheets/1664fa.pdf
+$ENDCMP
+#
+$CMP LTC1664IN
+D Quad Micropower 10-bit DAC, Industrial, DIP-16
+K Quad DAC Micropower 10bit 4ch
+F https://www.analog.com/media/en/technical-documentation/data-sheets/1664fa.pdf
+$ENDCMP
+#
+$CMP MCP1501_1-25V
+D Quad Micropower 10-bit DAC, Standard, SSOP-16
+K Quad DAC Micropower 10bit 4ch
+F https://www.analog.com/media/en/technical-documentation/data-sheets/1664fa.pdf
+$ENDCMP
+#
 $CMP Solar_Cell
 D Single solar cell
 K solar cell
 F ~
+$ENDCMP
+#
+$CMP Vref
+D Power symbol creates a global label with name "VCC"
+K power-flag
+$ENDCMP
+#
+$CMP Vsolar
+D Power symbol creates a global label with name "VCC"
+K power-flag
 $ENDCMP
 #
 #End Doc Library
