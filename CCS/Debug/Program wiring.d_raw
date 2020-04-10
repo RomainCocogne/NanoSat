@@ -1,0 +1,27 @@
+wiring.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/wiring.c
+wiring.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\Energia.h
+wiring.obj: C:/ti/ccs920/ccs/ccs_base/msp430/include/msp430.h
+wiring.obj: C:\ti\ccs920\ccs\ccs_base\msp430\include\msp430g2553.h
+wiring.obj: C:\ti\ccs920\ccs\ccs_base\msp430\include\in430.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/intrinsics.h
+wiring.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\intrinsics_legacy_undefs.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/stdint.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_stdint40.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/stdint.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/cdefs.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/_types.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_types.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_stdint.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/_stdint.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/string.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_ti_config.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/linkage.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/math.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_defs.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_limits.h
+wiring.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\binary.h
+wiring.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/avr/dtostrf.h
+wiring.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/avr/pgmspace.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/inttypes.h
+wiring.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_inttypes.h
+wiring.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/avr/interrupt.h
