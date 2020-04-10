@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 9
 Title ""
 Date ""
 Rev ""
@@ -169,4 +169,21 @@ F 3 "" H 7200 2950 50  0001 C CNN
 	1    7200 2950
 	1    0    0    -1  
 $EndComp
+$Comp
+L panneaux_solaires:100nF C?
+U 1 1 5E86AB42
+P 3450 3300
+F 0 "C?" H 3542 3346 50  0000 L CNN
+F 1 "100nF" H 3542 3255 50  0000 L CNN
+F 2 "" H 3450 3300 50  0001 C CNN
+F 3 "~" H 3450 3300 50  0001 C CNN
+	1    3450 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3400 3850 3400
+Connection ~ 3850 3400
+Wire Wire Line
+	3450 3200 3850 3200
+Connection ~ 3850 3200
 $EndSCHEMATC

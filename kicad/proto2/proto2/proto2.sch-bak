@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 9
 Title ""
 Date ""
 Rev ""
@@ -15,27 +15,51 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 3350 1500 1350 700 
+S 2500 3400 750  450 
 U 5E753F29
 F0 "ref_tension" 50
 F1 "ref_tension_1-25V.sch" 50
 $EndSheet
 $Sheet
-S 6100 1500 1050 650 
+S 1100 2700 800  2100
 U 5E7571A7
 F0 "solar_rows" 50
 F1 "solar_rows.sch" 50
 $EndSheet
 $Sheet
-S 7850 1600 1100 700 
+S 4450 5250 1100 700 
 U 5E8B7D51
 F0 "camera" 50
 F1 "camera.sch" 50
 $EndSheet
 $Sheet
-S 4300 3000 1200 650 
+S 2950 5250 1100 700 
 U 5E8CE88D
 F0 "temperature" 50
 F1 "temperature.sch" 50
+$EndSheet
+$Sheet
+S 3950 3050 2050 1300
+U 5E7EC2F4
+F0 "micro_controleur" 50
+F1 "micro_controleur.sch" 50
+$EndSheet
+$Sheet
+S 5950 5250 1100 700 
+U 5E879542
+F0 "magnetometer" 50
+F1 "magnetometer.sch" 50
+$EndSheet
+$Sheet
+S 7450 5250 1100 700 
+U 5E8BEAAD
+F0 "photo_diode" 50
+F1 "photo_diode.sch" 50
+$EndSheet
+$Sheet
+S 2300 1900 2550 550 
+U 5E7FC345
+F0 "regulateur_tension" 50
+F1 "regulateur_tension.sch" 50
 $EndSheet
 $EndSCHEMATC

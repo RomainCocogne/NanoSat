@@ -6,6 +6,12 @@ K capacitor cap
 F ~
 $ENDCMP
 #
+$CMP 10nF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
 $CMP 10uF
 D Unpolarized capacitor, small symbol
 K capacitor cap
@@ -13,6 +19,12 @@ F ~
 $ENDCMP
 #
 $CMP 2.2uF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP 47nF
 D Unpolarized capacitor, small symbol
 K capacitor cap
 F ~
@@ -40,6 +52,12 @@ $CMP MCP1501_1-25V
 D Quad Micropower 10-bit DAC, Standard, SSOP-16
 K Quad DAC Micropower 10bit 4ch
 F https://www.analog.com/media/en/technical-documentation/data-sheets/1664fa.pdf
+$ENDCMP
+#
+$CMP NCP59302DSADJR4G
+D Dual 3A-Peak MOSFET Driver, inverting outputs, DFN-8
+K Driver, Dual MOSFET
+F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP14A0303_4_5-Data-Sheet-20006046A.pdf
 $ENDCMP
 #
 $CMP Solar_Cell
