@@ -18,6 +18,18 @@ K capacitor cap
 F ~
 $ENDCMP
 #
+$CMP 1uF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP 2.2nF
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
 $CMP 2.2uF
 D Unpolarized capacitor, small symbol
 K capacitor cap
