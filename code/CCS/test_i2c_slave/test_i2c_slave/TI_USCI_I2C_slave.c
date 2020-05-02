@@ -35,7 +35,6 @@
 #include "TI_USCI_I2C_slave.h"
 
 #include <msp430.h>
-//#include <legacymsp430.h>
 
 void (*TI_receive_callback)(unsigned char receive);
 void (*TI_transmit_callback)(unsigned char volatile *send_next);
@@ -72,6 +71,9 @@ void TI_USCI_I2C_slaveinit(void (*SCallback)(),
     TI_transmit_callback = TCallback;
 }
 
+// Create the interrupt routine associated with USCIAB0TX_VECTOR
+// This will be called whenever a byte is available in the i2c transmit buffer
+// Details on i2c interrupt vector at page 465 of the family manual
 // USCI_B0 Data ISR
 #pragma vector=USCIAB0TX_VECTOR
 __interrupt void usci_i2c_data_isr(void)
@@ -82,6 +84,9 @@ __interrupt void usci_i2c_data_isr(void)
         TI_receive_callback(UCB0RXBUF);
 }
 
+// Create the interrupt routine associated with USCIAB0RX_VECTOR
+// This will be called whenever the i2c odule receives a start condition
+// Details on i2c interrupt vector at page 465 of the family manual
 // USCI_B0 State ISR
 #pragma vector=USCIAB0RX_VECTOR
 __interrupt void usci_i2c_state_isr(void)

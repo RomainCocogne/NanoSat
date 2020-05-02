@@ -70,110 +70,104 @@ void receive_cb(unsigned char receive);
 void transmit_cb(unsigned char volatile *receive);
 
 /* Commands */
-#define CMD_SETLED  0x00
-#define CMD_GETBTN  0x01
-#define CMD_UNKNOWN 0xFF
+#define CMD_READ_SENSOR1  0x01
+#define CMD_READ_SENSOR2  0x02
+#define CMD_READ_SENSOR3  0x03
 
-/* Parameters */
-#define PAR_LEDOFF  0x00
-#define PAR_LEDON   0x01
-#define PAR_UNKNOWN 0xFF
 
 /* Responses */
 #define RES_ERROR   0xFF
 
-/* last command */
-unsigned char cmd = CMD_UNKNOWN;
+/* Buffer size */
+#define MAX_BUFF_SIZE 32
 
-/* last parameter */
-unsigned char par = PAR_UNKNOWN;
 
 /* response to send out on read req. */
-unsigned char res = RES_ERROR;
+char message_buffer[MAX_BUFF_SIZE];
+unsigned int buffer_index;
 
+// Valeurs des capteurs. Buffers de tailles différentes pour représenter
+// différents types de capteurs
+char sensor1_data[2] = {0x88, 0xFF};  //Valeur -120. Semblable a ce qui est renvoyé par
+                                      //le capteur de température (correpondrait à -15 degrés C)
+char sensor2_data[4] = {0x76, 0xFD, 0xFF, 0xFF}; //Valeur -650
+char sensor3_data[1] = {0x03}; //Valeur 3
 
-// Fonctions émulent l'acquisition d'une donnée depuis un capteur
-char get_sensor1_value(){
+// Fonctions qui émulent l'acquisition d'une donnée depuis un capteur
+void get_sensor1_data(){
     // Boucle de délai pour simuler le temps d'acquisition
     // et de traitment des capteurs
     unsigned long int i;
-    unsigned long int reach = 1<<10;
+    unsigned long int reach = 1<<5;
     for(i=0; i<reach; i++);
-    return 0x10;
+
+    //Lecture des valeurs
+    message_buffer[buffer_index++] = sensor1_data[0];
+    message_buffer[buffer_index++] = sensor1_data[1];
 }
 
-char get_sensor2_value(){
+void get_sensor2_data(){
     unsigned long int i;
     unsigned long int reach = 1;
-    reach = reach<<20;
+    reach = reach<<10;
     for(i=0; i<reach; i++);
-    return 0x20;
+    message_buffer[buffer_index++] = sensor2_data[0];
+    message_buffer[buffer_index++] = sensor2_data[1];
+    message_buffer[buffer_index++] = sensor2_data[2];
+    message_buffer[buffer_index++] = sensor2_data[3];
 }
 
-char get_sensor3_value(){
+void get_sensor3_data(){
     unsigned long int i;
     unsigned long int reach = 1;
-    reach = reach<<24;
+    reach = reach<<15;
     for(i=0; i<reach; i++);
-    return 0x30;
+    message_buffer[buffer_index++] = sensor3_data[0];
 }
 
-void process_cmd(unsigned char cmd, unsigned char par)
-{
-    res = RES_ERROR;
-
-    switch(cmd) {
-    case CMD_SETLED:
-        if(par == PAR_LEDON) {
-            P1OUT |= BIT0;
-        } else if(par == PAR_LEDOFF) {
-            P1OUT &= ~BIT0;
-        }
-        break;
-    case CMD_GETBTN:
-        res = get_sensor2_value();
-        break;
-    }
+// Function qui place 0xFFFFFFFF dans le buffer pour signaler une erreur
+void error_message(){
+    message_buffer[buffer_index++] = RES_ERROR;
+    message_buffer[buffer_index++] = RES_ERROR;
+    message_buffer[buffer_index++] = RES_ERROR;
+    message_buffer[buffer_index++] = RES_ERROR;
 }
 
 void start_cb()
 {
-    cmd = CMD_UNKNOWN;
-    par = PAR_UNKNOWN;
+    buffer_index = 0;
 }
 
 void receive_cb(unsigned char receive)
 {
-    // TODO: En fonction de la valeur reçue, choisir un capteur
-    if(cmd == CMD_UNKNOWN) {
-
-        cmd = receive;
-
-        if(cmd == CMD_GETBTN) {
-            process_cmd(cmd, PAR_UNKNOWN);
-        }
-    } else {
-        par = receive;
-        process_cmd(cmd, par);
+    // Lit la commande reçue
+    switch (receive){
+        case CMD_READ_SENSOR1:
+            get_sensor1_data();
+            break;
+        case CMD_READ_SENSOR2:
+            get_sensor2_data();
+            break;
+        case CMD_READ_SENSOR3:
+            get_sensor3_data();
+            break;
+        default:
+            error_message();
     }
 }
 
 void transmit_cb(unsigned char volatile *byte)
 {
-    *byte = res;
+    //*byte = res;
+    *byte = message_buffer[buffer_index++];
 }
 
 int main(void)
 {
-    // TODO : Adapter le programme pour lire les données depuis trois sensors différents
-    //        Adapter le programme pour pouvoir lire n fois d'affilée le méme sensor
-    //        Enlever la gestion de LED/Boutton du programme original
+    // TODO : Adapter le programme pour pouvoir lire n fois d'affilée le même sensor
     //        Changer le header comment dans tous les fichiers
     //        Suivre le conseils d'optimisation dans tous les codes
     WDTCTL = WDTPW + WDTHOLD;                      // Stop WDT
-    P1DIR |= BIT0;                                 // Set P1.0 to output direction
-    P1DIR &= ~BIT3;                                // Set P1.3 to input  direction
-    P1OUT &= ~BIT0;
 
     TI_USCI_I2C_slaveinit(start_cb, transmit_cb, receive_cb, 0x40);
 

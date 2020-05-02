@@ -43,6 +43,7 @@ void main(void)
     while ( TI_USCI_I2C_notready() );         // wait for bus to be free
     TI_USCI_I2C_receive(2,store);
     while ( TI_USCI_I2C_notready() );         // wait for bus to be free
+    //Tester que ça fonctionne bien pour des températures négatives
     data = (store[0] << 3) | (store[1] >> 5);
     value = data*0.125-offset;
 
