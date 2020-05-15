@@ -74,6 +74,11 @@ void transmit_cb(unsigned char volatile *receive);
 #define CMD_READ_SENSOR2  0x02
 #define CMD_READ_SENSOR3  0x03
 
+//Ajouter des commandes
+// List sensors
+// µcontroller status check
+// Solar cells status check
+
 
 /* Responses */
 #define RES_ERROR   0xFF

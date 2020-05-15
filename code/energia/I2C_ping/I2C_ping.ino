@@ -1,5 +1,5 @@
 #include <Wire.h>
-const int WHO_AM_I = 0x0f;
+const int WHO_AM_I = 0x28;
 
 void setup() {
   // Init port serie pour le debug
