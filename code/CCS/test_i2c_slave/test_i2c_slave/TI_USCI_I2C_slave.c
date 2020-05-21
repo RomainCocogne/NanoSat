@@ -85,7 +85,7 @@ __interrupt void usci_i2c_data_isr(void)
 }
 
 // Create the interrupt routine associated with USCIAB0RX_VECTOR
-// This will be called whenever the i2c odule receives a start condition
+// This will be called whenever the i2c module receives a start condition
 // Details on i2c interrupt vector at page 465 of the family manual
 // USCI_B0 State ISR
 #pragma vector=USCIAB0RX_VECTOR

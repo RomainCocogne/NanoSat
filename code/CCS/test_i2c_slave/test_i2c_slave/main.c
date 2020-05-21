@@ -1,63 +1,23 @@
 /*
- * This file is part of the MSP430 USCI I2C slave example.
+ * Author : Quentin Combal
  *
- * Copyright (C) 2012 Stefan Wendler <sw@kaltpost.de>
+ * Part of the NiceCube project
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Based off the MSP430 USCI I2C slave example by Stefan Wendler
+ * <https://github.com/wendlers/msp430-i2cslave>
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program can be tested with master_writer_nano_sat
+ * demo program running on an Arduino board acting as the
+ * i2c master.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-/**
- * This firmware acts as an I2C slave on address 0x90(W)/0x91(R).
- * It receives a command / parameter pair from the I2C master and
- * sends out a response on a masters read request.
+ * This program makes the MSP430 act as an i2c slave. It receives
+ * commands from the master with eventual parameters and sends back
+ * the requested data
  *
- * The firmware knows two commands:
- *
- * CMD_SETLED: sets the build in LED (P1.0) of the launchpad depending
- * on the given parameter to HIGH (0x01) or LOW (0x00).
- *
- * CMD_GETBTN: copies the state of the build in push-button (P1.3) to
- * the response buffer and transmits it to the master on the next read
- * request.
- *
- * As a I2C master, the bus pirate could be used. To set the BP into
- * I2C mode use:
- *
- *    m4 3
- *
- * Bus-Piret I2C commands to
- *
- * - set LED HIGH (P1.0)
- *    [0x90 0x00 0x01
- *
- * - set LED LOW  (P1.0)
- *    [0x90 0x00 0x00
- *
- * - get BUTTON state (P1.3)
- *    [0x90 0x01 [0x91 r
- *
- * For a quick start to setup the I2C slave, the TI USCI I2C slave
- * code from slaa383 was used and slightly modified to work on
- * the MSP430G2553 and the MSP-GCC. For detail on leagal issues
- * regarding the TI_USCI_I2C_slave code see "ti-usci-i2c-slave-legal.txt".
- *
- * NOTE: 100k extrnal pull-ups are needed on SDA/SDC.
  */
 
 #include <msp430.h>
-//#include <legacymsp430.h>
-
+#include <string.h>
 #include "TI_USCI_I2C_slave.h"
 
 /* callback for start condition */
@@ -70,41 +30,52 @@ void receive_cb(unsigned char receive);
 void transmit_cb(unsigned char volatile *receive);
 
 /* Commands */
-#define CMD_READ_SENSOR1  0x01
-#define CMD_READ_SENSOR2  0x02
-#define CMD_READ_SENSOR3  0x03
+#define CMD_READ_SENSOR         0x01
+#define CMD_LIST_SENSORS        0x02
+#define CMD_CONTROLLER_STATUS   0x03
+#define CMD_CELLS_STATUS        0x04
+#define CMD_UNKNOWN             0x99
 
-//Ajouter des commandes
-// List sensors
-// µcontroller status check
-// Solar cells status check
-
+/* Parameters */
+#define PAR_SENSOR1         0x01
+#define PAR_SENSOR2         0x02
+#define PAR_SENSOR3         0x03
+#define PAR_ALL_SENSORS     0x04
+#define PAR_UNKNOWN         0xFF
 
 /* Responses */
 #define RES_ERROR   0xFF
 
 /* Buffer size */
-#define MAX_BUFF_SIZE 32
+#define MAX_BUFF_SIZE 128
 
+/* last command */
+unsigned char cmd = CMD_UNKNOWN;
+
+/* last parameter */
+unsigned char par = PAR_UNKNOWN;
 
 /* response to send out on read req. */
 char message_buffer[MAX_BUFF_SIZE];
-unsigned int buffer_index;
+unsigned int buffer_index = 0;
 
-// Valeurs des capteurs. Buffers de tailles différentes pour représenter
-// différents types de capteurs
-char sensor1_data[2] = {0x88, 0xFF};  //Valeur -120. Semblable a ce qui est renvoyé par
-                                      //le capteur de température (correpondrait à -15 degrés C)
-char sensor2_data[4] = {0x76, 0xFD, 0xFF, 0xFF}; //Valeur -650
-char sensor3_data[1] = {0x03}; //Valeur 3
 
-// Fonctions qui émulent l'acquisition d'une donnée depuis un capteur
+/*
+ * Valeurs des capteurs. Buffers de tailles différentes pour représenter
+ * différents types de capteurs
+ */
+
+char sensor1_data[2] = {0x88, 0xFF};             // Valeur -120
+char sensor2_data[4] = {0x76, 0xFD, 0xFF, 0xFF}; // Valeur -650
+char sensor3_data[1] = {0x03};                   // Valeur 3
+
+/*Fonctions qui émulent l'acquisition d'une donnée depuis un capteur*/
 void get_sensor1_data(){
     // Boucle de délai pour simuler le temps d'acquisition
     // et de traitment des capteurs
     unsigned long int i;
-    unsigned long int reach = 1<<5;
-    for(i=0; i<reach; i++);
+    unsigned long int delay = 1<<5;
+    for(i=0; i<delay; i++);
 
     //Lecture des valeurs
     message_buffer[buffer_index++] = sensor1_data[0];
@@ -113,9 +84,9 @@ void get_sensor1_data(){
 
 void get_sensor2_data(){
     unsigned long int i;
-    unsigned long int reach = 1;
-    reach = reach<<10;
-    for(i=0; i<reach; i++);
+    unsigned long int delay = 1;
+    delay = delay<<10;
+    for(i=0; i<delay; i++);
     message_buffer[buffer_index++] = sensor2_data[0];
     message_buffer[buffer_index++] = sensor2_data[1];
     message_buffer[buffer_index++] = sensor2_data[2];
@@ -124,13 +95,36 @@ void get_sensor2_data(){
 
 void get_sensor3_data(){
     unsigned long int i;
-    unsigned long int reach = 1;
-    reach = reach<<15;
-    for(i=0; i<reach; i++);
+    unsigned long int delay = 1;
+    delay = delay<<15;
+    for(i=0; i<delay; i++);
     message_buffer[buffer_index++] = sensor3_data[0];
 }
 
-// Function qui place 0xFFFFFFFF dans le buffer pour signaler une erreur
+void get_sensors_list(){
+    // Clear buffer
+    memset(message_buffer, 0, 128);
+    // Basic test message of 96 characters
+    strcpy(message_buffer, "Sensor 1: LM75A Thermometer\n"
+                           "Sensor 2: LSM9DS1 Magnetic sensor\n"
+                           "Sensor 3: MLX90641 Thermal Camera\n");
+}
+
+void get_controller_status(){
+    // Clear buffer
+    memset(message_buffer, 0, 128);
+    //Basic test message
+    strcpy(message_buffer, "Controller OK");
+}
+
+void get_cells_status(){
+    // Clear buffer
+    memset(message_buffer, 0, 128);
+    //Basic test message
+    strcpy(message_buffer, "All cells OK");
+}
+
+/*Place 0xFFFFFFFF dans le buffer pour signaler une erreur*/
 void error_message(){
     message_buffer[buffer_index++] = RES_ERROR;
     message_buffer[buffer_index++] = RES_ERROR;
@@ -138,48 +132,75 @@ void error_message(){
     message_buffer[buffer_index++] = RES_ERROR;
 }
 
+/* Determine l'action a effectuer selon la commande*/
+void process_cmd(unsigned char cmd, unsigned char par)
+{
+    // Reset buffer index for writing
+    buffer_index = 0;
+
+    switch (cmd){
+        case CMD_READ_SENSOR:
+                if ((par == PAR_SENSOR1) || (par == PAR_ALL_SENSORS))
+                    get_sensor1_data();
+                if ((par == PAR_SENSOR2) || (par == PAR_ALL_SENSORS))
+                    get_sensor2_data();
+                if ((par == PAR_SENSOR3) || (par == PAR_ALL_SENSORS))
+                    get_sensor3_data();
+            break;
+        case CMD_LIST_SENSORS:
+            get_sensors_list();
+            break;
+        case CMD_CONTROLLER_STATUS:
+            get_controller_status();
+            break;
+        case CMD_CELLS_STATUS:
+            get_cells_status();
+            break;
+        default:
+            error_message();
+    }
+
+    // Reset buffer index for the next transmit request
+        buffer_index = 0;
+}
+
 void start_cb()
 {
-    buffer_index = 0;
+    cmd = CMD_UNKNOWN;
+    par = PAR_UNKNOWN;
 }
 
 void receive_cb(unsigned char receive)
 {
-    // Lit la commande reçue
-    switch (receive){
-        case CMD_READ_SENSOR1:
-            get_sensor1_data();
-            break;
-        case CMD_READ_SENSOR2:
-            get_sensor2_data();
-            break;
-        case CMD_READ_SENSOR3:
-            get_sensor3_data();
-            break;
-        default:
-            error_message();
+    if(cmd == CMD_UNKNOWN) {
+
+        cmd = receive;
+
+        if(cmd == CMD_LIST_SENSORS || cmd == CMD_CONTROLLER_STATUS || cmd == CMD_CELLS_STATUS) {
+            // Commande sans paramètre
+            process_cmd(cmd, PAR_UNKNOWN);
+        }
+    } else {
+        par = receive;
+        process_cmd(cmd, par);
     }
 }
 
 void transmit_cb(unsigned char volatile *byte)
 {
-    //*byte = res;
-    *byte = message_buffer[buffer_index++];
+    *byte = message_buffer[buffer_index];
+    if (buffer_index < MAX_BUFF_SIZE - 1)
+        buffer_index++;
 }
 
 int main(void)
 {
-    // TODO : Adapter le programme pour pouvoir lire n fois d'affilée le même sensor
-    //        Changer le header comment dans tous les fichiers
+    // TODO : Changer le header comment dans tous les fichiers
     //        Suivre le conseils d'optimisation dans tous les codes
+
     WDTCTL = WDTPW + WDTHOLD;                      // Stop WDT
 
     TI_USCI_I2C_slaveinit(start_cb, transmit_cb, receive_cb, 0x40);
-
-    // Commandes de calibration dans le programme original.
-    // Aucune utilité  à priori donc enlenvé
-    //BCSCTL1 = CALBC1_16MHZ;
-    //DCOCTL  = CALDCO_16MHZ;
 
     // Met le microcontrolleur en mode low power
     // et active les interruptions
@@ -187,8 +208,7 @@ int main(void)
 
 
     // Le reste du programme boucle dans le vide. Les fonctions de callback
-    // sont appellées quand leurs interruptions respectives sont déclenchées.
+    // sont appellées quand leurs interruptions sont déclenchées.
     while(1);
 
-    return 0;
 }
