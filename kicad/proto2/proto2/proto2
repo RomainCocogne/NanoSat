@@ -1,0 +1,159 @@
+Source:,/home/romain/Bureau/NanoSat/kicad/proto2/proto2/proto2.sch,,,
+Date:,sam. 23 mai 2020 21:53:54,,,
+Tool:,Eeschema 5.1.5+dfsg1-2build2,,,
+Generator:,/usr/share/kicad/plugins/bom_csv_grouped_by_value.py,,,
+Component Count:,115,,,
+,,,,
+Individual Components:,,,,
+,,,,
+Item,Qty,Reference(s),Value,Datasheet
+,,AC1,LSM9DS1TR,http://www.st.com/content/ccc/resource/technical/document/datasheet/1e/3f/2a/d6/25/eb/48/46/DM00103319.pdf/files/DM00103319.pdf/jcr:content/translations/en.DM00103319.pdf
+,,C1,100nF,~
+,,C2,1uF,~
+,,C3,1uF,~
+,,C4,10uF,~
+,,C5,100nF,~
+,,C7,100nF,~
+,,C8,10uF,~
+,,C9,10uF,~
+,,C10,10uF,~
+,,C11,10uF,~
+,,C12,10nF,~
+,,C13,10nF,~
+,,C14,10nF,~
+,,C15,10nF,~
+,,C22,2.2nF,~
+,,C23,100nF,~
+,,C24,100nF,~
+,,C25,100nF,~
+,,C26,100nF,~
+,,C27,10nF,~
+,,C28,100nF,~
+,,C29,10uF,~
+,,C30,100nF,~
+,,C31,100nF,~
+,,C32,100nF,~
+,,C33,100nF,~
+,,C34,100nF,~
+,,C35,2.2uF,~
+,,C36,47nF,~
+,,C37,100nF,~
+,,D1,D_Schottky,~
+,,D2,D_Schottky,~
+,,D3,D_Schottky,~
+,,IC1,MLX90641ESF-BAA-000-TU,https://www.mouser.com/datasheet/2/734/MLX90614-Datasheet-Melexis-953298.pdf
+,,IC2,"PCT2075DP,118",http://www.nxp.com/docs/en/data-sheet/PCT2075.pdf
+,,IC3,MSP430FR5964IPNR,http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fmsp430fr5962
+,,J5,HEADER_2x7_2.54MM,
+,,J6,532610871,3.4mm
+,,Q1,RUR040N02HZGTL,~
+,,Q2,RUR040N02HZGTL,~
+,,Q3,RUR040N02HZGTL,~
+,,Q4,RUR040N02HZGTL,~
+,,Q5,RUR040N02HZGTL,~
+,,Q6,RUR040N02HZGTL,~
+,,Q7,RUR040N02HZGTL,~
+,,Q8,RUR040N02HZGTL,~
+,,Q9,RUR040N02HZGTL,~
+,,Q10,RUR040N02HZGTL,~
+,,Q11,RUR040N02HZGTL,~
+,,Q12,RUR040N02HZGTL,~
+,,Q13,RUR040N02HZGTL,~
+,,Q14,RUR040N02HZGTL,~
+,,R1,20R,~
+,,R2,1M,~
+,,R3,100mR,
+,,R4,20R,~
+,,R5,1M,~
+,,R6,100mR,
+,,R7,20R,~
+,,R8,1M,~
+,,R9,100mR,
+,,R10,20R,~
+,,R11,1M,~
+,,R12,330R,
+,,R13,330R,
+,,R14,20R,~
+,,R15,1M,~
+,,R16,330R,
+,,R17,330R,
+,,R18,330R,
+,,R19,47kR,
+,,R20,10k,
+,,R21,10k,
+,,R22,10k,
+,,R23,10k,
+,,R24,10k,
+,,R25,10k,
+,,R26,10k,
+,,R27,330R,
+,,R28,330R,
+,,R29,20R,~
+,,R30,1M,~
+,,R31,20R,~
+,,R32,1M,~
+,,R33,10k,
+,,R34,10k,
+,,R35,10k,
+,,R36,10k,
+,,R37,3.3k,
+,,R38,2k,
+,,R39,330R,
+,,R40,330R,
+,,R41,330R,
+,,R42,330R,
+,,R43,330R,
+,,R44,330R,
+,,SC1,Solar_Cell,~
+,,SC2,Solar_Cell,~
+,,SC3,Solar_Cell,~
+,,SC4,Solar_Cell,~
+,,SC5,Solar_Cell,~
+,,SC6,Solar_Cell,~
+,,SC7,Solar_Cell,~
+,,SC8,Solar_Cell,~
+,,SC9,Solar_Cell,~
+,,SC10,Solar_Cell,~
+,,SC11,Solar_Cell,~
+,,SC12,Solar_Cell,~
+,,SW1,BP_DROIT_TRAV-switch,
+,,U1,LT1790ACS6-1.25TRMPBF,LT1790ACS6-1.25#TRMPBF
+,,U2,S3274-05,
+,,U3,S3274-05,
+,,U4,NCP59302DSADJR4G,http://ww1.microchip.com/downloads/en/DeviceDoc/MCP14A0303_4_5-Data-Sheet-20006046A.pdf
+,,U5,INA3221AIRGVR,Texas Instruments
+,,,,
+,,,,
+,,,,
+Collated Components:,,,,
+,,,,
+Item,Qty,Reference(s),Value,Datasheet
+1,1,AC1,LSM9DS1TR,http://www.st.com/content/ccc/resource/technical/document/datasheet/1e/3f/2a/d6/25/eb/48/46/DM00103319.pdf/files/DM00103319.pdf/jcr:content/translations/en.DM00103319.pdf
+2,14,"C1, C5, C7, C23, C24, C25, C26, C28, C30, C31, C32, C33, C34, C37",100nF,~
+3,2,"C2, C3",1uF,~
+4,6,"C4, C8, C9, C10, C11, C29",10uF,~
+5,5,"C12, C13, C14, C15, C27",10nF,~
+6,1,C22,2.2nF,~
+7,1,C35,2.2uF,~
+8,1,C36,47nF,~
+9,3,"D1, D2, D3",D_Schottky,~
+10,1,IC1,MLX90641ESF-BAA-000-TU,https://www.mouser.com/datasheet/2/734/MLX90614-Datasheet-Melexis-953298.pdf
+11,1,IC2,"PCT2075DP,118",http://www.nxp.com/docs/en/data-sheet/PCT2075.pdf
+12,1,IC3,MSP430FR5964IPNR,http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fmsp430fr5962
+13,1,J5,HEADER_2x7_2.54MM,
+14,1,J6,532610871,3.4mm
+15,14,"Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14",RUR040N02HZGTL,~
+16,7,"R1, R4, R7, R10, R14, R29, R31",20R,~
+17,7,"R2, R5, R8, R11, R15, R30, R32",1M,~
+18,3,"R3, R6, R9",100mR,
+19,13,"R12, R13, R16, R17, R18, R27, R28, R39, R40, R41, R42, R43, R44",330R,
+20,1,R19,47kR,
+21,11,"R20, R21, R22, R23, R24, R25, R26, R33, R34, R35, R36",10k,
+22,1,R37,3.3k,
+23,1,R38,2k,
+24,12,"SC1, SC2, SC3, SC4, SC5, SC6, SC7, SC8, SC9, SC10, SC11, SC12",Solar_Cell,~
+25,1,SW1,BP_DROIT_TRAV-switch,
+26,1,U1,LT1790ACS6-1.25TRMPBF,LT1790ACS6-1.25#TRMPBF
+27,2,"U2, U3",S3274-05,
+28,1,U4,NCP59302DSADJR4G,http://ww1.microchip.com/downloads/en/DeviceDoc/MCP14A0303_4_5-Data-Sheet-20006046A.pdf
+29,1,U5,INA3221AIRGVR,Texas Instruments
