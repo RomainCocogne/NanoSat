@@ -90,6 +90,7 @@ Integrated Circuit
 0
 0
 0
+<<<<<<< Updated upstream
 
 0
 4
@@ -125,6 +126,8 @@ Integrated Circuit
 0
 0
 0
+=======
+>>>>>>> Stashed changes
 ---> PIN TP (exposed thermal die pad) should be connected with GND
 
 0
@@ -181,6 +184,7 @@ Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W le
 2
 0
 0
+<<<<<<< Updated upstream
 
 
 0
@@ -188,6 +192,8 @@ Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W le
 4
 0
 0
+=======
+>>>>>>> Stashed changes
 
 
 0
@@ -209,6 +215,7 @@ Integrated Circuit
 3
 0
 0
+<<<<<<< Updated upstream
 
 
 0
@@ -216,6 +223,8 @@ Integrated Circuit
 6
 0
 0
+=======
+>>>>>>> Stashed changes
 
 
 0
@@ -223,6 +232,7 @@ Integrated Circuit
 1
 0
 0
+<<<<<<< Updated upstream
 
 
 0
@@ -230,6 +240,8 @@ Integrated Circuit
 14
 0
 0
+=======
+>>>>>>> Stashed changes
 TO-247-3, Vertical, RM 5.45mm, see https://toshiba.semicon-storage.com/us/product/mosfet/to-247-4l.html
 TO-247-3 Vertical RM 5.45mm
 0
@@ -265,7 +277,11 @@ test point wire loop
 2
 0
 0
+<<<<<<< Updated upstream
 SMD rectangular pad as test Point, square 2.0mm side length
+=======
+SMD rectangular pad as test Point, square 3.0mm side length
+>>>>>>> Stashed changes
 test point SMD pad rectangle square
 0
 1
@@ -286,6 +302,7 @@ Resistor Axial_DIN0204 series Axial Vertical pin pitch 1.9mm 0.167W length 3.6mm
 2
 0
 0
+<<<<<<< Updated upstream
 TE-6MM-TACT-SWITCH
 Switch
 0
@@ -293,3 +310,5 @@ Switch
 4
 0
 0
+=======
+>>>>>>> Stashed changes
