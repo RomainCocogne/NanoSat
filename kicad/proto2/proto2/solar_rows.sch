@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 3 11
 Title ""
 Date ""
 Rev ""
@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L power:GND #PWR?
 U 1 1 5E785D5F
-P 2850 5250
-F 0 "#PWR?" H 2850 5000 50  0001 C CNN
-F 1 "GND" H 2855 5077 50  0000 C CNN
-F 2 "" H 2850 5250 50  0001 C CNN
-F 3 "" H 2850 5250 50  0001 C CNN
-	1    2850 5250
+P 2850 5150
+F 0 "#PWR?" H 2850 4900 50  0001 C CNN
+F 1 "GND" H 2855 4977 50  0000 C CNN
+F 2 "" H 2850 5150 50  0001 C CNN
+F 3 "" H 2850 5150 50  0001 C CNN
+	1    2850 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -83,34 +83,29 @@ $EndComp
 $Comp
 L 1_solar_bank-rescue:Vsolar-panneaux_solaires #PWR?
 U 1 1 5E785D83
-P 2850 1650
-F 0 "#PWR?" H 2850 1500 50  0001 C CNN
-F 1 "Vsolar" H 2867 1823 50  0000 C CNN
-F 2 "" H 2850 1650 50  0001 C CNN
-F 3 "" H 2850 1650 50  0001 C CNN
-	1    2850 1650
+P 3450 1350
+F 0 "#PWR?" H 3450 1200 50  0001 C CNN
+F 1 "Vsolar" H 3467 1523 50  0000 C CNN
+F 2 "" H 3450 1350 50  0001 C CNN
+F 3 "" H 3450 1350 50  0001 C CNN
+	1    3450 1350
 	1    0    0    -1  
 $EndComp
 Text GLabel 1400 4200 0    50   Input ~ 0
 BNK1_CONTROL
 Text Notes 600  950  0    50   ~ 0
 logic 0 or 1 -> 0V or 3.3V \n0V -> NMOS1 off -> PMOS2 grid short circuited -> PMOS2 on\n3.3V -> NMOS1 on -> PMOS2 grid to Vsolar -> PMOS2 off\n
-Text GLabel 2100 4850 0    50   Input ~ 0
-AMPERMETER1
-Wire Wire Line
-	2100 4850 2850 4850
-Wire Wire Line
-	2850 4950 2850 4850
-Connection ~ 2850 4850
+Text GLabel 2350 1550 0    50   Input ~ 0
+AMPERMETER1+
 $Comp
 L Device:Fuse_Small F?
 U 1 1 5E785D8F
-P 2850 1750
-F 0 "F?" V 2804 1798 50  0000 L CNN
-F 1 "Fuse_Small" V 2895 1798 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 2850 1750 50  0001 C CNN
-F 3 "~" H 2850 1750 50  0001 C CNN
-	1    2850 1750
+P 2850 5050
+F 0 "F?" V 2804 5098 50  0000 L CNN
+F 1 "Fuse_Small" V 2895 5098 50  0000 L CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 2850 5050 50  0001 C CNN
+F 3 "~" H 2850 5050 50  0001 C CNN
+	1    2850 5050
 	0    1    1    0   
 $EndComp
 Text GLabel 3300 2150 2    50   Input ~ 0
@@ -136,17 +131,6 @@ F 2 "panneaux_solaires:TestPoint_Bridge_Pitch2.54mm_Drill0.7mm" H 2850 3700 50  
 F 3 "~" H 2850 3700 50  0001 C CNN
 	1    2850 3700
 	0    1    1    0   
-$EndComp
-$Comp
-L panneaux_solaires:20R R?
-U 1 1 5E785DA2
-P 2850 5100
-F 0 "R?" H 2918 5146 50  0000 L CNN
-F 1 "20R" H 2918 5055 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 2890 5090 50  0001 C CNN
-F 3 "~" H 2850 5100 50  0001 C CNN
-	1    2850 5100
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2850 4300 2850 4450
@@ -246,8 +230,6 @@ F 3 "~" H 1900 4200 50  0001 C CNN
 	1    1900 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2850 4450 2850 4850
 $Comp
 L panneaux_solaires:RUR040N02HZGTL Q?
 U 1 1 5E785E5A
@@ -374,12 +356,12 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E79ACCF
-P 9350 5250
-F 0 "#PWR?" H 9350 5000 50  0001 C CNN
-F 1 "GND" H 9355 5077 50  0000 C CNN
-F 2 "" H 9350 5250 50  0001 C CNN
-F 3 "" H 9350 5250 50  0001 C CNN
-	1    9350 5250
+P 9350 5150
+F 0 "#PWR?" H 9350 4900 50  0001 C CNN
+F 1 "GND" H 9355 4977 50  0000 C CNN
+F 2 "" H 9350 5150 50  0001 C CNN
+F 3 "" H 9350 5150 50  0001 C CNN
+	1    9350 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -437,35 +419,17 @@ F 3 "~" H 9350 2000 50  0001 C CNN
 	1    9350 2000
 	0    1    1    0   
 $EndComp
-$Comp
-L 1_solar_bank-rescue:Vsolar-panneaux_solaires #PWR?
-U 1 1 5E79ACF3
-P 9350 1650
-F 0 "#PWR?" H 9350 1500 50  0001 C CNN
-F 1 "Vsolar" H 9367 1823 50  0000 C CNN
-F 2 "" H 9350 1650 50  0001 C CNN
-F 3 "" H 9350 1650 50  0001 C CNN
-	1    9350 1650
-	1    0    0    -1  
-$EndComp
 Text GLabel 7900 4200 0    50   Input ~ 0
 BNK3_CONTROL
-Text GLabel 8600 4850 0    50   Input ~ 0
-AMPERMETER3
-Wire Wire Line
-	8600 4850 9350 4850
-Wire Wire Line
-	9350 4950 9350 4850
-Connection ~ 9350 4850
 $Comp
 L Device:Fuse_Small F?
 U 1 1 5E79ACFE
-P 9350 1750
-F 0 "F?" V 9304 1798 50  0000 L CNN
-F 1 "Fuse_Small" V 9395 1798 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 9350 1750 50  0001 C CNN
-F 3 "~" H 9350 1750 50  0001 C CNN
-	1    9350 1750
+P 9350 5050
+F 0 "F?" V 9304 5098 50  0000 L CNN
+F 1 "Fuse_Small" V 9395 5098 50  0000 L CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 9350 5050 50  0001 C CNN
+F 3 "~" H 9350 5050 50  0001 C CNN
+	1    9350 5050
 	0    1    1    0   
 $EndComp
 Text GLabel 9800 2150 2    50   Input ~ 0
@@ -491,17 +455,6 @@ F 2 "panneaux_solaires:TestPoint_Bridge_Pitch2.54mm_Drill0.7mm" H 9350 3700 50  
 F 3 "~" H 9350 3700 50  0001 C CNN
 	1    9350 3700
 	0    1    1    0   
-$EndComp
-$Comp
-L panneaux_solaires:20R R?
-U 1 1 5E79AD11
-P 9350 5100
-F 0 "R?" H 9418 5146 50  0000 L CNN
-F 1 "20R" H 9418 5055 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 9390 5090 50  0001 C CNN
-F 3 "~" H 9350 5100 50  0001 C CNN
-	1    9350 5100
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9350 4300 9350 4450
@@ -578,8 +531,6 @@ Wire Wire Line
 Wire Wire Line
 	10250 4450 9350 4450
 Connection ~ 9350 4450
-Wire Wire Line
-	9350 4450 9350 4850
 Wire Wire Line
 	9350 3500 9350 3400
 Wire Wire Line
@@ -875,8 +826,6 @@ Wire Wire Line
 	7000 3800 7000 3400
 Wire Wire Line
 	6100 3500 6100 3400
-Wire Wire Line
-	6100 4450 6100 4850
 Connection ~ 6100 4450
 Wire Wire Line
 	7000 4450 6100 4450
@@ -953,17 +902,6 @@ $EndComp
 Wire Wire Line
 	6100 4300 6100 4450
 $Comp
-L panneaux_solaires:20R R?
-U 1 1 5E785E1B
-P 6100 5100
-F 0 "R?" H 6168 5146 50  0000 L CNN
-F 1 "20R" H 6168 5055 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6140 5090 50  0001 C CNN
-F 3 "~" H 6100 5100 50  0001 C CNN
-	1    6100 5100
-	1    0    0    -1  
-$EndComp
-$Comp
 L panneaux_solaires:Jumper_2_Bridged JP?
 U 1 1 5E785E15
 P 6100 3700
@@ -990,34 +928,16 @@ VOLTMETER2
 $Comp
 L Device:Fuse_Small F?
 U 1 1 5E785E08
-P 6100 1750
-F 0 "F?" V 6054 1798 50  0000 L CNN
-F 1 "Fuse_Small" V 6145 1798 50  0000 L CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 6100 1750 50  0001 C CNN
-F 3 "~" H 6100 1750 50  0001 C CNN
-	1    6100 1750
+P 6100 5050
+F 0 "F?" V 6054 5098 50  0000 L CNN
+F 1 "Fuse_Small" V 6145 5098 50  0000 L CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" H 6100 5050 50  0001 C CNN
+F 3 "~" H 6100 5050 50  0001 C CNN
+	1    6100 5050
 	0    1    1    0   
 $EndComp
-Connection ~ 6100 4850
-Wire Wire Line
-	6100 4950 6100 4850
-Wire Wire Line
-	5350 4850 6100 4850
-Text GLabel 5350 4850 0    50   Input ~ 0
-AMPERMETER2
 Text GLabel 4650 4200 0    50   Input ~ 0
 BNK2_CONTROL
-$Comp
-L 1_solar_bank-rescue:Vsolar-panneaux_solaires #PWR?
-U 1 1 5E785DFD
-P 6100 1650
-F 0 "#PWR?" H 6100 1500 50  0001 C CNN
-F 1 "Vsolar" H 6117 1823 50  0000 C CNN
-F 2 "" H 6100 1650 50  0001 C CNN
-F 3 "" H 6100 1650 50  0001 C CNN
-	1    6100 1650
-	1    0    0    -1  
-$EndComp
 $Comp
 L panneaux_solaires:D_Schottky-panneaux_solaires D?
 U 1 1 5E785DF7
@@ -1076,12 +996,12 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5E785DD9
-P 6100 5250
-F 0 "#PWR?" H 6100 5000 50  0001 C CNN
-F 1 "GND" H 6105 5077 50  0000 C CNN
-F 2 "" H 6100 5250 50  0001 C CNN
-F 3 "" H 6100 5250 50  0001 C CNN
-	1    6100 5250
+P 6100 5150
+F 0 "#PWR?" H 6100 4900 50  0001 C CNN
+F 1 "GND" H 6105 4977 50  0000 C CNN
+F 2 "" H 6100 5150 50  0001 C CNN
+F 3 "" H 6100 5150 50  0001 C CNN
+	1    6100 5150
 	1    0    0    -1  
 $EndComp
 Connection ~ 5450 2450
@@ -1099,4 +1019,129 @@ Connection ~ 8700 3050
 Connection ~ 9350 2450
 Connection ~ 9350 2750
 Connection ~ 9350 3050
+$Comp
+L panneaux_solaires:100mR R?
+U 1 1 5EA3F1D9
+P 3050 1650
+F 0 "R?" V 2845 1650 50  0000 C CNN
+F 1 "100mR" V 2936 1650 50  0000 C CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 3090 1640 50  0001 C CNN
+F 3 "" H 3050 1650 50  0001 C CNN
+	1    3050 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2850 1850 2850 1650
+Wire Wire Line
+	2850 1650 2900 1650
+Wire Wire Line
+	3200 1650 3450 1650
+Wire Wire Line
+	3450 1650 3450 1400
+Wire Wire Line
+	2850 1650 2850 1550
+Wire Wire Line
+	2850 1550 2350 1550
+Connection ~ 2850 1650
+Wire Wire Line
+	3450 1400 2350 1400
+Connection ~ 3450 1400
+Wire Wire Line
+	3450 1400 3450 1350
+Wire Wire Line
+	2850 4450 2850 4950
+Wire Wire Line
+	6100 4450 6100 4950
+Wire Wire Line
+	9350 4450 9350 4950
+Text GLabel 2350 1400 0    50   Input ~ 0
+AMPERMETER-
+$Comp
+L 1_solar_bank-rescue:Vsolar-panneaux_solaires #PWR?
+U 1 1 5EA74366
+P 6700 1350
+F 0 "#PWR?" H 6700 1200 50  0001 C CNN
+F 1 "Vsolar" H 6717 1523 50  0000 C CNN
+F 2 "" H 6700 1350 50  0001 C CNN
+F 3 "" H 6700 1350 50  0001 C CNN
+	1    6700 1350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5600 1550 0    50   Input ~ 0
+AMPERMETER2+
+$Comp
+L panneaux_solaires:100mR R?
+U 1 1 5EA7436D
+P 6300 1650
+F 0 "R?" V 6095 1650 50  0000 C CNN
+F 1 "100mR" V 6186 1650 50  0000 C CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6340 1640 50  0001 C CNN
+F 3 "" H 6300 1650 50  0001 C CNN
+	1    6300 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 1850 6100 1650
+Wire Wire Line
+	6100 1650 6150 1650
+Wire Wire Line
+	6450 1650 6700 1650
+Wire Wire Line
+	6700 1650 6700 1400
+Wire Wire Line
+	6100 1650 6100 1550
+Wire Wire Line
+	6100 1550 5600 1550
+Connection ~ 6100 1650
+Wire Wire Line
+	6700 1400 5600 1400
+Connection ~ 6700 1400
+Wire Wire Line
+	6700 1400 6700 1350
+Text GLabel 5600 1400 0    50   Input ~ 0
+AMPERMETER-
+$Comp
+L 1_solar_bank-rescue:Vsolar-panneaux_solaires #PWR?
+U 1 1 5EA7A569
+P 9950 1350
+F 0 "#PWR?" H 9950 1200 50  0001 C CNN
+F 1 "Vsolar" H 9967 1523 50  0000 C CNN
+F 2 "" H 9950 1350 50  0001 C CNN
+F 3 "" H 9950 1350 50  0001 C CNN
+	1    9950 1350
+	1    0    0    -1  
+$EndComp
+Text GLabel 8850 1550 0    50   Input ~ 0
+AMPERMETER3+
+$Comp
+L panneaux_solaires:100mR R?
+U 1 1 5EA7A570
+P 9550 1650
+F 0 "R?" V 9345 1650 50  0000 C CNN
+F 1 "100mR" V 9436 1650 50  0000 C CNN
+F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 9590 1640 50  0001 C CNN
+F 3 "" H 9550 1650 50  0001 C CNN
+	1    9550 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 1850 9350 1650
+Wire Wire Line
+	9350 1650 9400 1650
+Wire Wire Line
+	9700 1650 9950 1650
+Wire Wire Line
+	9950 1650 9950 1400
+Wire Wire Line
+	9350 1650 9350 1550
+Wire Wire Line
+	9350 1550 8850 1550
+Connection ~ 9350 1650
+Wire Wire Line
+	9950 1400 8850 1400
+Connection ~ 9950 1400
+Wire Wire Line
+	9950 1400 9950 1350
+Text GLabel 8850 1400 0    50   Input ~ 0
+AMPERMETER-
 $EndSCHEMATC

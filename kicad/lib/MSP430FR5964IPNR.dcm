@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MSP430FR5964IPNR
+D 16 MHz Ultra-Low-Power MCU With 256 KB FRAM, 8 KB SRAM, AES, 12-bit ADC
+K
+F http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fmsp430fr5962
+$ENDCMP
+#
+#End Doc Library
