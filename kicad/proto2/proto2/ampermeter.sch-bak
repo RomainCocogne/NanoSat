@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:proto2-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L panneaux_solaires:INA3221AIRGVR U?
+L panneaux_solaires:INA3221AIRGVR U5
 U 1 1 5E9B08EE
 P 5450 3100
-F 0 "U?" H 5450 3967 50  0000 C CNN
+F 0 "U5" H 5450 3967 50  0000 C CNN
 F 1 "INA3221AIRGVR" H 5450 3876 50  0000 C CNN
 F 2 "QFN65P400X400X100-17N" H 5450 3100 50  0001 L BNN
 F 3 "Texas Instruments" H 5450 3100 50  0001 L BNN
@@ -38,10 +37,10 @@ L panneaux_solaires:330R R?
 U 1 1 5EA866F6
 P 4700 2800
 AR Path="/5E8CE88D/5EA866F6" Ref="R?"  Part="1" 
-AR Path="/5E95D111/5EA866F6" Ref="R?"  Part="1" 
-F 0 "R?" V 4650 2700 50  0000 C CNN
+AR Path="/5E95D111/5EA866F6" Ref="R40"  Part="1" 
+F 0 "R40" V 4650 2700 50  0000 C CNN
 F 1 "330R" V 4650 2950 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 4740 2790 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4740 2790 50  0001 C CNN
 F 3 "" H 4700 2800 50  0001 C CNN
 	1    4700 2800
 	0    1    1    0   
@@ -51,10 +50,10 @@ L panneaux_solaires:330R R?
 U 1 1 5EA866FC
 P 4700 2700
 AR Path="/5E8CE88D/5EA866FC" Ref="R?"  Part="1" 
-AR Path="/5E95D111/5EA866FC" Ref="R?"  Part="1" 
-F 0 "R?" V 4650 2600 50  0000 C CNN
+AR Path="/5E95D111/5EA866FC" Ref="R39"  Part="1" 
+F 0 "R39" V 4650 2600 50  0000 C CNN
 F 1 "330R" V 4650 2850 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 4740 2690 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4740 2690 50  0001 C CNN
 F 3 "" H 4700 2700 50  0001 C CNN
 	1    4700 2700
 	0    1    1    0   
@@ -68,10 +67,10 @@ Wire Wire Line
 Wire Wire Line
 	3950 2800 4550 2800
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR096
 U 1 1 5EA89E1C
 P 6050 2500
-F 0 "#PWR?" H 6050 2350 50  0001 C CNN
+F 0 "#PWR096" H 6050 2350 50  0001 C CNN
 F 1 "+3.3V" H 6065 2673 50  0000 C CNN
 F 2 "" H 6050 2500 50  0001 C CNN
 F 3 "" H 6050 2500 50  0001 C CNN
@@ -79,10 +78,10 @@ F 3 "" H 6050 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR098
 U 1 1 5EA8A401
 P 6400 1800
-F 0 "#PWR?" H 6400 1650 50  0001 C CNN
+F 0 "#PWR098" H 6400 1650 50  0001 C CNN
 F 1 "+3.3V" H 6415 1973 50  0000 C CNN
 F 2 "" H 6400 1800 50  0001 C CNN
 F 3 "" H 6400 1800 50  0001 C CNN
@@ -90,10 +89,10 @@ F 3 "" H 6400 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR099
 U 1 1 5EA8A7C1
 P 6400 2000
-F 0 "#PWR?" H 6400 1750 50  0001 C CNN
+F 0 "#PWR099" H 6400 1750 50  0001 C CNN
 F 1 "GND" H 6405 1827 50  0000 C CNN
 F 2 "" H 6400 2000 50  0001 C CNN
 F 3 "" H 6400 2000 50  0001 C CNN
@@ -101,21 +100,21 @@ F 3 "" H 6400 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L panneaux_solaires:100nF C?
+L panneaux_solaires:100nF C37
 U 1 1 5EA8A9F1
 P 6400 1900
-F 0 "C?" H 6492 1946 50  0000 L CNN
+F 0 "C37" H 6492 1946 50  0000 L CNN
 F 1 "100nF" H 6492 1855 50  0000 L CNN
-F 2 "" H 6400 1900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6400 1900 50  0001 C CNN
 F 3 "~" H 6400 1900 50  0001 C CNN
 	1    6400 1900
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR097
 U 1 1 5EA90EA2
 P 6050 3700
-F 0 "#PWR?" H 6050 3450 50  0001 C CNN
+F 0 "#PWR097" H 6050 3450 50  0001 C CNN
 F 1 "GND" H 6055 3527 50  0000 C CNN
 F 2 "" H 6050 3700 50  0001 C CNN
 F 3 "" H 6050 3700 50  0001 C CNN
@@ -127,10 +126,10 @@ Wire Wire Line
 Text GLabel 3950 2900 0    50   Input ~ 0
 AMP_A0
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR095
 U 1 1 5EA94520
 P 4850 2500
-F 0 "#PWR?" H 4850 2350 50  0001 C CNN
+F 0 "#PWR095" H 4850 2350 50  0001 C CNN
 F 1 "+3.3V" H 4865 2673 50  0000 C CNN
 F 2 "" H 4850 2500 50  0001 C CNN
 F 3 "" H 4850 2500 50  0001 C CNN
@@ -138,12 +137,12 @@ F 3 "" H 4850 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L panneaux_solaires:330R R?
+L panneaux_solaires:330R R41
 U 1 1 5EA95450
 P 6200 2700
-F 0 "R?" V 6150 2550 50  0000 C CNN
+F 0 "R41" V 6150 2550 50  0000 C CNN
 F 1 "330R" V 6150 2850 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6240 2690 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6240 2690 50  0001 C CNN
 F 3 "" H 6200 2700 50  0001 C CNN
 	1    6200 2700
 	0    1    1    0   
@@ -153,12 +152,12 @@ Wire Wire Line
 Text GLabel 6800 2700 2    50   Input ~ 0
 AMP_WARNING
 $Comp
-L panneaux_solaires:330R R?
+L panneaux_solaires:330R R42
 U 1 1 5EA97539
 P 6200 2800
-F 0 "R?" V 6150 2650 50  0000 C CNN
+F 0 "R42" V 6150 2650 50  0000 C CNN
 F 1 "330R" V 6150 2950 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6240 2790 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6240 2790 50  0001 C CNN
 F 3 "" H 6200 2800 50  0001 C CNN
 	1    6200 2800
 	0    1    1    0   
@@ -168,12 +167,12 @@ Wire Wire Line
 Text GLabel 6800 2800 2    50   Input ~ 0
 AMP_TC
 $Comp
-L panneaux_solaires:330R R?
+L panneaux_solaires:330R R43
 U 1 1 5EA97896
 P 6200 2900
-F 0 "R?" V 6150 2750 50  0000 C CNN
+F 0 "R43" V 6150 2750 50  0000 C CNN
 F 1 "330R" V 6150 3050 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6240 2890 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6240 2890 50  0001 C CNN
 F 3 "" H 6200 2900 50  0001 C CNN
 	1    6200 2900
 	0    1    1    0   
@@ -183,12 +182,12 @@ Wire Wire Line
 Text GLabel 6800 2900 2    50   Input ~ 0
 AMP_CRITICAL
 $Comp
-L panneaux_solaires:330R R?
+L panneaux_solaires:330R R44
 U 1 1 5EA97B1D
 P 6200 3000
-F 0 "R?" V 6150 2850 50  0000 C CNN
+F 0 "R44" V 6150 2850 50  0000 C CNN
 F 1 "330R" V 6150 3150 50  0000 C CNN
-F 2 "panneaux_solaires:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 6240 2990 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6240 2990 50  0001 C CNN
 F 3 "" H 6200 3000 50  0001 C CNN
 	1    6200 3000
 	0    1    1    0   
@@ -211,4 +210,6 @@ Wire Wire Line
 	4600 3600 4850 3600
 Wire Wire Line
 	4600 3700 4850 3700
+Text Notes 3750 1600 0    118  ~ 0
+Ampermeter
 $EndSCHEMATC
