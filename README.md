@@ -1,4 +1,4 @@
-<img src="http://unice.fr/polytechnice/fr/contenus-riches/images/logos/logo-polytechnice/image_full" width="50" height="100">
+<img src="http://unice.fr/polytechnice/fr/contenus-riches/images/logos/logo-polytechnice/image_full" width="400" height="50">
 
 ### Desciption
 This repo is the current work of the Smart Solar Panel Project, an auxiliary project of NiceCube.
