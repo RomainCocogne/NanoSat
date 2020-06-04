@@ -1,6 +1,0 @@
-itoa.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/itoa.c
-itoa.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\itoa.h
-itoa.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/string.h
-itoa.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_ti_config.h
-itoa.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/linkage.h
-itoa.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/cdefs.h

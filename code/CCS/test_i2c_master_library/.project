@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>test_i2c_master_library</name>
+	<name>thermometer_example</name>
 	<comment></comment>
 	<projects>
 	</projects>

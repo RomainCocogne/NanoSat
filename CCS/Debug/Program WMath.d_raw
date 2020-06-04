@@ -1,9 +1,0 @@
-WMath.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/WMath.cpp
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/stdlib.h
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/__config
-WMath.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__config_site
-WMath.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__libcxx_extra.h
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/stdlib.h
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_ti_config.h
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/linkage.h
-WMath.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/cdefs.h

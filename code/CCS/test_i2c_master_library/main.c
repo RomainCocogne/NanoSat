@@ -6,14 +6,14 @@ shown. This library uses pointers to specify what data is to be sent.
 When calling the TI_USCI_I2C_receive or TI_USCI_I2C_transmit routines 
 the number of bytes, which are to be transmitted or received have to be passed as 
 well as a pointer to a data field, that contains(or stores) the data.
+*******************************************************************************
+Modified by Quentin Combal to work with the LM75A temperature sensor
+as part of the NanoSat project
 
-This code checks if there is a slave with address 0x48 is connected to the I2C
-bus and if the slave device is present, bytes are received and transmitted.
+This program is used to communicate with the LM75A thermometer using I2C
 
-Uli Kretzschmar
-MSP430 Systems
-Freising
 *******************************************************************************/
+
 #include "msp430x26x.h"
 #include "TI_USCI_I2C_master.h"
 
@@ -43,7 +43,7 @@ void main(void)
     while ( TI_USCI_I2C_notready() );         // wait for bus to be free
     TI_USCI_I2C_receive(2,store);
     while ( TI_USCI_I2C_notready() );         // wait for bus to be free
-    //Tester que ça fonctionne avec des températures négatives
+    //TODO: Tester que ça fonctionne avec des températures négatives
     data = (store[0] << 3) | (store[1] >> 5);
     if (data & (1 << 10))
         data = -data;

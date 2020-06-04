@@ -53,3 +53,6 @@ dkms.conf
 
 # NiceCube Datasheets
 Documentation/*
+
+# Old documents
+archive/*
