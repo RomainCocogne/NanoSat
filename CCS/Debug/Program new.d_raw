@@ -1,0 +1,10 @@
+new.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/new.cpp
+new.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/new.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/stdlib.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/__config
+new.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__config_site
+new.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__libcxx_extra.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/stdlib.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_ti_config.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/linkage.h
+new.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/cdefs.h

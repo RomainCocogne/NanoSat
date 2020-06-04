@@ -1,0 +1,30 @@
+WString.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/WString.cpp
+WString.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\WString.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/stdlib.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/__config
+WString.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__config_site
+WString.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\libcxx\__libcxx_extra.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/stdlib.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_ti_config.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/linkage.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/cdefs.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/string.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/string.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/ctype.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/ctype.h
+WString.obj: C:\ti\ccs920\ccs\tools\compiler\ti-cgt-msp430_18.12.4.LTS\include\_isfuncdcl.h
+WString.obj: C:/Program\\ Files/Energia/energia-1.8.7E21/hardware/energia/msp430/cores/msp430/avr/pgmspace.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/inttypes.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/inttypes.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_inttypes.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/stdint.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/_types.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_types.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/machine/_stdint.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/sys/_stdint.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/libcxx/stdint.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/stdint.h
+WString.obj: C:/ti/ccs920/ccs/tools/compiler/ti-cgt-msp430_18.12.4.LTS/include/_stdint40.h
+WString.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\itoa.h
+WString.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\atof.h
+WString.obj: C:\Program\\ Files\Energia\energia-1.8.7E21\hardware\energia\msp430\cores\msp430\avr/dtostrf.h

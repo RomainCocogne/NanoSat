@@ -2,8 +2,7 @@
 #include <Wire.h>
 #include <Adafruit_AMG88xx.h>
 #include <math.h>
-#include "Regression_lineaire.h"
-#include "LinearRegression_mtx.h"
+
 
 Adafruit_AMG88xx amg;
 
@@ -102,21 +101,6 @@ void print_pixels () {
 
 void print_angles() {
 
-  //    coeffs_x[0] = -1.6;
-  //    coeffs_y[0] = -0.6;
-  //    coeffs_x[1] = 5.9;
-  //    coeffs_y[1] = 4.33;
-  //    rank_mat_y = 8;
-  //    rank_mat_x = 4;
-  //  double values[3];
-  //  horizon.getValues(values);
-  //  Serial.println("methode 1 { ");
-  //  if (values[2] != 0) {
-  //    Serial.print("number of values : "); Serial.println(values[2]);
-  //    Serial.print("\tvertical : "); Serial.println(values[0]);
-  //    Serial.print("\thorizontal : "); Serial.println(values[1]);
-  //  }
-  //  Serial.println("}");
 
   mtx_type coeffs_x[2] = {0, 0};
   mtx_type coeffs_y[2] = {0, 0};
@@ -132,12 +116,6 @@ void print_angles() {
   double alpha = 0;
   double beta = 0;
 
-  //    coeffs_x[0] = -1.6;
-  //    coeffs_y[0] = -0.6;
-  //    coeffs_x[1] = 5.9;
-  //    coeffs_y[1] = 4.33;
-  //    rank_mat_y = 8;
-  //    rank_mat_x = 4;
   if (coeffs_x[0] == 0) {
     alpha = PI / 2;
     beta = PI / 6 / 3.5 * (3.5 * (1 - coeffs_y[0]) - coeffs_y[1]) / (sqrt(coeffs_y[0] * coeffs_y[0] + 1));
