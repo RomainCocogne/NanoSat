@@ -129,93 +129,93 @@ Integrated Circuit
 =======
 >>>>>>> Stashed changes
 ---> PIN TP (exposed thermal die pad) should be connected with GND
-
+0
 0
 49
 49
 0
 0
 SOT-23 (TO-236)
-Integrated Circuit
+0
 0
 3
 3
 0
 0
 Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
-resistor
+0
 0
 2
 2
 0
 0
 Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
-resistor
+0
 0
 2
 2
 0
 0
 Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
-resistor
+0
 0
 2
 2
 0
 0
 Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
-resistor
+0
 0
 2
 2
 0
 0
 Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=15.24mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0309 series Axial Horizontal pin pitch 15.24mm 0.5W = 1/2W length 9mm diameter 3.2mm
+0
 0
 2
 2
 0
 0
 Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
+0
 0
 2
 2
 0
 0
 <<<<<<< Updated upstream
-
-
+0
+0
 0
 4
 4
 0
 0
-=======
->>>>>>> Stashed changes
-
+0
+0
+0
 
 0
 2
 2
 0
 0
-SOT505-1
+0
 Integrated Circuit
 0
 8
 8
 0
 0
-<b>SOT-54</b><p>grid 2.54 mm
+0
 
 0
 3
 3
 0
 0
-<<<<<<< Updated upstream
+0
 
 
 0
@@ -234,51 +234,51 @@ Integrated Circuit
 0
 <<<<<<< Updated upstream
 
-
+0
 0
 14
 14
 0
 0
 =======
->>>>>>> Stashed changes
-TO-247-3, Vertical, RM 5.45mm, see https://toshiba.semicon-storage.com/us/product/mosfet/to-247-4l.html
-TO-247-3 Vertical RM 5.45mm
+0
+0
+0
 0
 3
 3
 0
 0
-<b></b>
-
+0
+0
 0
 3
 3
 0
 0
-
-
+0
+0
 0
 2
 2
 0
 0
-
-
+0
+0
 0
 4
 4
 0
 0
-wire loop as test point, pitch 2.0mm, hole diameter 0.7mm, wire diameter 0.5mm
-test point wire loop
+0
+0
 0
 2
 2
 0
 0
-<<<<<<< Updated upstream
-SMD rectangular pad as test Point, square 2.0mm side length
+0
+0
 =======
 SMD rectangular pad as test Point, square 3.0mm side length
 >>>>>>> Stashed changes
@@ -304,11 +304,6 @@ Resistor Axial_DIN0204 series Axial Vertical pin pitch 1.9mm 0.167W length 3.6mm
 0
 <<<<<<< Updated upstream
 TE-6MM-TACT-SWITCH
-Switch
+0
 0
 4
-4
-0
-0
-=======
->>>>>>> Stashed changes
