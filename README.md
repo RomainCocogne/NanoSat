@@ -1,4 +1,4 @@
-![Polytech](http://www.polytechnice.fr/jahia/jsp/jahia/templates/inc/img/polytech_nice-sophia.png)
+<img src="http://www.polytechnice.fr/jahia/jsp/jahia/templates/inc/img/polytech_nice-sophia.png" width="10" height="10">
 
 ### Desciption
 This repo is the current work of the Smart Solar Panel Project, an auxiliary project of NiceCube.
